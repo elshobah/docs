@@ -1,0 +1,155 @@
+---
+title: "Presensi & Absensi"
+description: "Input kehadiran harian, kelola izin keluar/pulang, dan analisis absensi santri/siswa."
+---
+
+# Presensi & Absensi
+
+Modul presensi memungkinkan pengajar untuk input kehadiran santri/siswa setiap hari. Admin juga bisa lihat laporan absensi per santri/siswa atau per kelas.
+
+## Apa Itu Presensi?
+
+Presensi adalah catatan kehadiran santri/siswa dalam sesi pembelajaran. Setiap hari, pengajar mencatat:
+- **Hadir:** Santri/siswa masuk tepat waktu
+- **Terlambat:** Santri/siswa datang terlambat
+- **Sakit:** Dengan surat keterangan
+- **Izin:** Dengan permohonan resmi
+- **Alpa/Tanpa Keterangan:** Tidak hadir tanpa alasan jelas
+
+<Snippet file="info-multi-tenant.mdx" />
+
+## Cara Menggunakan
+
+### Buat Sesi Presensi
+
+<Steps>
+  <Step title="Buka Presensi → Sesi Presensi">
+    Di admin panel, tekan **+ Sesi Baru**.
+  </Step>
+
+  <Step title="Isi detail sesi">
+    - **Nama Sesi:** "Presensi Pagi", "Presensi Tahfidz", dll
+    - **Tanggal:** Kapan sesi ini
+    - **Waktu Mulai:** Pukul berapa sesi dimulai
+    - **Jenis:** Pagi, Siang, Malam, dll
+    - **Kelas:** Pilih kelas yang presensi
+  </Step>
+
+  <Step title="Otomatis masukkan santri/siswa">
+    Sistem otomatis list semua santri/siswa di kelas tersebut. Pengajar tinggal input status tiap santri/siswa.
+  </Step>
+</Steps>
+
+### Input Presensi Harian
+
+<Steps>
+  <Step title="Buka Presensi → Input Presensi Hari Ini">
+    Atau cari sesi yang sudah dibuat.
+  </Step>
+
+  <Step title="Input status untuk setiap santri/siswa">
+    Untuk setiap santri/siswa di kelas, pilih status:
+    - ✅ **Hadir**
+    - 🕐 **Terlambat** (+ input jam tiba)
+    - 🏥 **Sakit** (+ upload surat keterangan opsional)
+    - 📝 **Izin** (+ keterangan alasan)
+    - ❌ **Alpa** (tanpa keterangan)
+
+    <Tip>
+    Masukkan data presensi hari yang sama jangan menunggu (bisa lupa detailnya).
+    </Tip>
+  </Step>
+
+  <Step title="Tambah catatan (opsional)">
+    Jika ada santri/siswa yang perlu catatan khusus, tekan ikon komentar & isi catatan.
+  </Step>
+
+  <Step title="Simpan">
+    Tekan **Simpan** atau **Simpan & Next Sesi** jika ada sesi lain.
+  </Step>
+</Steps>
+
+### Kelola Pengajuan Izin
+
+Santri/siswa atau orang tua bisa ajukan izin keluar/pulang via portal:
+
+<Steps>
+  <Step title="Buka Perizinan → Pengajuan Izin">
+    Admin akan melihat daftar pengajuan izin yang masuk.
+  </Step>
+
+  <Step title="Review pengajuan">
+    Lihat detail:
+    - Nama santri/siswa
+    - Alasan izin
+    - Tanggal & jam keluar-masuk
+    - File pendukung (surat orang tua, kartu keluarga, dll)
+  </Step>
+
+  <Step title="Setujui atau tolak">
+    Tekan **Setujui** atau **Tolak**. Jika setujui, otomatis status presensi akan berubah menjadi "Izin".
+  </Step>
+</Steps>
+
+### Lihat Laporan Absensi
+
+<Steps>
+  <Step title="Buka Presensi → Laporan Absensi">
+    Pilih filter:
+    - Periode (bulan/tanggal range)
+    - Kelas
+    - Santri/siswa tertentu
+  </Step>
+
+  <Step title="Lihat ringkasan">
+    Laporan menampilkan:
+    - Total hari masuk
+    - Total terlambat
+    - Total sakit
+    - Total izin
+    - Total alpa
+    - Persentase kehadiran
+
+    Export ke PDF atau Excel untuk keperluan laporan.
+  </Step>
+</Steps>
+
+## Hal yang Perlu Diperhatikan
+
+<Warning>
+**Presensi adalah data penting untuk analisis disiplin.** Jangan input presensi dengan sembarangan. Tingkat alpa yang tinggi bisa jadi indikasi masalah disiplin atau akademik santri/siswa.
+</Warning>
+
+<Tip>
+**Best Practice:**
+1. Input presensi setiap hari jangan ditunda
+2. Gunakan izin untuk santri/siswa yang punya alasan valid
+3. Monitor santri/siswa dengan alpa tinggi dan ambil tindakan (hubungi orang tua, dll)
+4. Review laporan absensi setiap minggu untuk deteksi trend
+</Tip>
+
+## Pertanyaan Umum
+
+<AccordionGroup>
+  <Accordion title="Bisa input presensi masa lalu (kemarin, minggu lalu)?">
+    Ya, saat membuat sesi atau input presensi, bisa atur tanggalnya ke tanggal yang sudah lalu. Tapi sebaiknya input hari yang sama agar data akurat.
+  </Accordion>
+
+  <Accordion title="Bagaimana jika pengajar lupa input presensi?">
+    Admin bisa edit atau input presensi untuk hari sebelumnya. Buka detail sesi, tekan **Edit** dan ubah data.
+  </Accordion>
+
+  <Accordion title="Apakah santri/siswa bisa lihat status presensi mereka?">
+    Ya, di portal orang tua mereka bisa lihat menu **Presensi** untuk melihat absensi bulanan mereka dan santri/siswa.
+  </Accordion>
+
+  <Accordion title="Bisa otomatis hitung persentase kehadiran untuk rapor?">
+    Ya, laporan presensi otomatis hitung persentase. Export ke Excel dan gunakan untuk rapor.
+  </Accordion>
+</AccordionGroup>
+
+## Langkah Berikutnya
+
+- [Hafalan Quran →](/panduan-admin/hafalan)
+- [Perizinan →](/panduan-admin/perizinan)
+- [Laporan & Analytics →](/panduan-admin/laporan)

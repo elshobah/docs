@@ -1,0 +1,290 @@
+---
+title: "Manajemen SPP & Keuangan"
+description: "Tagihan, pembayaran otomatis dengan kode unik, dan rekonsiliasi real-time untuk pesantren/madrasah."
+---
+
+# Manajemen SPP & Keuangan
+
+Modul keuangan Mazid adalah jantung dari platform. Di sini, admin dapat membuat tagihan, track pembayaran, dan melakukan rekonsiliasi otomatis dengan sistem kode unik yang revolusioner.
+
+## Apa Itu Sistem Kode Unik Mazid?
+
+Sistem kode unik adalah fitur **unik Mazid** yang membuat rekonsiliasi pembayaran menjadi otomatis dan real-time.
+
+**Cara kerjanya:**
+
+```
+┌─────────────────────────────────────┐
+│ ADMIN MEMBUAT TAGIHAN SPP          │
+│ Santri: Ahmad                       │
+│ Nominal: Rp 500.000                │
+└─────────────────────────────────────┘
+                  ↓
+┌─────────────────────────────────────┐
+│ SISTEM OTOMATIS BUAT KODE UNIK     │
+│ Kode Unik untuk Ahmad: 123         │
+│ (Unik per santri/siswa per tagihan)│
+└─────────────────────────────────────┘
+                  ↓
+┌─────────────────────────────────────┐
+│ SANTRI/SISWA ATAU ORANG TUA BAYAR   │
+│ Transfer ke: Rp 500.123            │
+│ (Nominal + Kode Unik)              │
+└─────────────────────────────────────┘
+                  ↓
+┌─────────────────────────────────────┐
+│ SISTEM OTOMATIS VERIFIKASI         │
+│ Transfer terima: Rp 500.123        │
+│ Cocok dengan tagihan + kode unik?  │
+│ ✅ YES → Bayaran accepted          │
+│ ✅ Kelebihan (Rp 123) → tabungan   │
+└─────────────────────────────────────┘
+```
+
+**Keuntungan:**
+- ✅ Tidak perlu konfirmasi manual
+- ✅ Rekonsiliasi real-time
+- ✅ Otomatis deteksi kelebihan pembayaran
+- ✅ Mengurangi human error
+- ✅ Menghemat waktu admin
+
+<Snippet file="tip-kode-unik.mdx" />
+
+## Modul Keuangan di Mazid
+
+<Tabs>
+  <Tab title="Tagihan">
+    **Tagihan (Bills)** adalah pesanan pembayaran yang dibuat admin untuk santri/siswa.
+
+    Jenis tagihan:
+    - **SPP Rutin:** Bulanan, per tahun, atau custom periode
+    - **Biaya Masuk:** One-time saat pendaftaran
+    - **Biaya Kegiatan:** Untuk acara khusus (wisata, outing, dll)
+  </Tab>
+
+  <Tab title="Pembayaran">
+    **Pembayaran (Payments)** adalah record ketika uang masuk dari santri/siswa atau orang tua.
+
+    Pembayaran bisa dari:
+    - Transfer bank (verifikasi kode unik)
+    - QRIS/e-wallet
+    - Offline (pembayaran tunai, diinput manual)
+  </Tab>
+
+  <Tab title="Tabungan">
+    **Tabungan (Wallet)** adalah saldo digital santri/siswa di platform.
+
+    Sumber tabungan:
+    - Kelebihan pembayaran tagihan (dari sistem kode unik)
+    - Top-up manual dari orang tua
+    - Potongan untuk keperluan lembaga
+
+    Santri/siswa bisa lihat saldo di portal.
+  </Tab>
+
+  <Tab title="Pengeluaran">
+    **Pengeluaran (Spendings)** adalah catatan biaya yang dikeluarkan lembaga.
+
+    Contoh:
+    - Gaji pengajar
+    - Pembelian alat
+    - Biaya operasional
+    - Perbaikan gedung
+
+    Berguna untuk laporan keuangan lembaga.
+  </Tab>
+</Tabs>
+
+## Cara Menggunakan
+
+### Membuat Tagihan SPP
+
+<Steps>
+  <Step title="Buka menu Keuangan → Tagihan">
+    Di admin panel, pilih **Keuangan** → **Tagihan**, tekan **+ Tagihan Baru**.
+  </Step>
+
+  <Step title="Pilih santri/siswa atau kelompok">
+    Anda bisa membuat tagihan untuk:
+    - **Individual:** 1 santri/siswa saja
+    - **Kelompok:** Satu kelas atau kategori santri/siswa (lebih cepat)
+
+    Jika pilih kelompok, sistem otomatis membuat tagihan untuk semua anggota kelompok.
+  </Step>
+
+  <Step title="Isi detail tagihan">
+    - **Nama Tagihan:** "SPP Januari 2024", "Biaya Kesehatan", dll
+    - **Nominal:** Jumlah yang harus dibayar (contoh: Rp 500.000)
+    - **Deadline:** Kapan harus dibayar (opsional tapi disarankan)
+    - **Deskripsi:** Penjelasan singkat (opsional)
+  </Step>
+
+  <Step title="Review dan simpan">
+    Cek data tagihan sekali lagi. Tekan **Buat Tagihan**.
+
+    <Tip>
+    Sistem otomatis membuat **kode unik berbeda untuk setiap santri/siswa**, jadi tidak perlu input manual.
+    </Tip>
+  </Step>
+
+  <Step title="Santri/siswa atau orang tua membayar">
+    Di portal orang tua, mereka akan melihat tagihan ini dan pilihan untuk bayar:
+    - **Transfer bank** (dengan kode unik)
+    - **QRIS**
+    - **E-wallet** (jika dikonfigurasi lembaga)
+
+    Tekan **Bayar** dan ikuti instruksi.
+  </Step>
+
+  <Step title="Admin verifikasi pembayaran">
+    Di menu **Keuangan → Pembayaran**, cek daftar pembayaran yang masuk. Sistem otomatis akan:
+    - ✅ Verifikasi kode unik (jika transfer bank)
+    - ✅ Update status tagihan menjadi "Lunas"
+    - ✅ Masukkan kelebihan ke tabungan santri/siswa
+
+    Jika ada pembayaran offline, admin tekan **+ Pembayaran Manual** dan input detailnya.
+  </Step>
+</Steps>
+
+### Membuat Tagihan Rutin (SPP Bulanan)
+
+Untuk tagihan berulang setiap bulan, gunakan fitur **Template Tagihan**:
+
+<Steps>
+  <Step title="Buka Keuangan → Template Tagihan">
+    Tekan **+ Template Baru**.
+  </Step>
+
+  <Step title="Atur pengulangan">
+    - Nominal tetap
+    - Frekuensi: Bulanan, 3 bulan, 6 bulan, tahunan
+    - Mulai dari bulan apa
+    - Otomatis buat tagihan tiap bulan
+  </Step>
+
+  <Step title="Pilih santri/siswa atau kelompok">
+    Contoh: semua santri/siswa aktif di Kelas 1
+  </Step>
+
+  <Step title="Simpan template">
+    Sistem akan otomatis buat tagihan sesuai jadwal Anda.
+  </Step>
+</Steps>
+
+### Lihat Laporan Keuangan
+
+<Steps>
+  <Step title="Buka Keuangan → Laporan">
+    Pilih periode yang ingin dilihat (bulan, tahun).
+  </Step>
+
+  <Step title="Lihat ringkasan">
+    - Total tagihan
+    - Total pembayaran masuk
+    - Total belum lunas
+    - Total tunggakan
+
+    Export ke PDF atau Excel jika perlu.
+  </Step>
+</Steps>
+
+## Konfigurasi Payment Gateway
+
+Jika ingin santri/siswa bisa bayar pakai QRIS, transfer otomatis, atau e-wallet, Anda perlu konfigurasi payment gateway.
+
+<Note>
+Payment gateway memerlukan akun terpisah (contoh: Duitku, Midtrans, dll). Lihat panduan spesifik payment gateway di [Panduan Integrasi Duitku →](/panduan-admin/spp-dan-keuangan#integrasi-duitku).
+</Note>
+
+### Integrasi Duitku
+
+Duitku adalah payment gateway populer untuk pesantren/madrasah. Berikut cara setup:
+
+<Steps>
+  <Step title="Daftar di Duitku">
+    Kunjungi [duitku.com](https://duitku.com) dan buat akun (butuh NPWP atau NIB).
+  </Step>
+
+  <Step title="Buat API Key di Duitku">
+    Di dashboard Duitku, pergi ke **Settings → API Key**. Copy:
+    - **Merchant Code** (nomor ID lembaga di Duitku)
+    - **API Key** (untuk autentikasi)
+  </Step>
+
+  <Step title="Input di Mazid">
+    Di Mazid, buka **Pengaturan → Payment Gateway → Duitku**:
+    - Pilih: **Duitku**
+    - Merchant Code: Paste dari Duitku
+    - API Key: Paste dari Duitku
+    - Status: Aktif
+
+    Tekan **Test Connection** untuk verifikasi.
+  </Step>
+
+  <Step title="Santri/siswa bisa bayar">
+    Di portal, ketika orang tua tekan **Bayar**, mereka akan melihat pilihan:
+    - Transfer bank ke rekening Duitku
+    - QRIS
+    - E-wallet (Gopay, OVO, DANA, dll)
+
+    Pembayaran otomatis masuk ke Mazid.
+  </Step>
+</Steps>
+
+## Hal yang Perlu Diperhatikan
+
+<Warning>
+**Jangan hapus tagihan yang sudah ada pembayaran masuk.** Jika ada kesalahan, pilih **Edit** dan ubah nominal, bukan hapus. Penghapusan bisa menyebabkan data pembayaran tidak tercatat dengan benar.
+</Warning>
+
+<Tip>
+**Best Practice:**
+1. Buat template tagihan untuk SPP rutin—lebih efisien daripada input manual setiap bulan
+2. Set deadline yang jelas di tagihan
+3. Review laporan keuangan tiap akhir bulan
+4. Gunakan tabungan santri/siswa untuk keperluan lembaga (pembelian seragam, dll)
+</Tip>
+
+## Pertanyaan Umum
+
+<AccordionGroup>
+  <Accordion title="Bagaimana jika ada pembayaran lebih yang tidak cocok dengan kode unik?">
+    Sistem akan mendeteksi sebagai "pembayaran belum terverifikasi". Admin perlu manual check:
+    1. Cek tagihan mana yang dimaksud
+    2. Tekan **Edit** di pembayaran
+    3. Hubungkan ke tagihan yang benar
+    4. Sisa masuk tabungan atau kembalikan ke pengirim
+  </Accordion>
+
+  <Accordion title="Bisa buat tagihan negatif (pengembalian uang)?">
+    Tidak ada fitur tagihan negatif. Jika ada pengembalian, admin bisa:
+    - Kurangi dari saldo tabungan santri/siswa
+    - Atau manual input pembayaran negatif di laporan
+
+    Hubungi support jika ada kasus khusus.
+  </Accordion>
+
+  <Accordion title="Apakah santri/siswa bisa bayar dengan cicilan?">
+    Fitur cicilan belum tersedia di Mazid v1. Untuk saat ini, admin perlu buat multiple tagihan (contoh: 3x untuk cicilan) atau custom setup. Hubungi support untuk opsi.
+  </Accordion>
+
+  <Accordion title="Bagaimana laporan keuangan untuk pajak/audit?">
+    Di **Keuangan → Laporan**, ada export lengkap ke Excel dengan:
+    - Semua tagihan
+    - Semua pembayaran masuk
+    - Saldo per santri/siswa
+    - Pengeluaran lembaga
+
+    Laporan ini bisa digunakan untuk keperluan pajak atau audit internal.
+  </Accordion>
+
+  <Accordion title="Bisakah saya atur komisi untuk pencatat pembayaran?">
+    Fitur komisi/bonus belum ada di Mazid. Untuk saat ini, kelola insentif operator secara manual di luar sistem.
+  </Accordion>
+</AccordionGroup>
+
+## Langkah Berikutnya
+
+- [Manajemen Santri/Siswa →](/panduan-admin/manajemen-santri)
+- [Presensi & Absensi →](/panduan-admin/presensi)
+- [Laporan & Analytics →](/panduan-admin/laporan)

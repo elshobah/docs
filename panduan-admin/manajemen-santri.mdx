@@ -1,0 +1,216 @@
+---
+title: "Manajemen Santri/Siswa"
+description: "Input data santri/siswa, keluarga, kontak darurat, dan status akademik."
+---
+
+# Manajemen Santri/Siswa
+
+Modul santri/siswa adalah pusat data untuk setiap peserta didik di lembaga Anda. Di sini, admin dapat input dan kelola data biodata, keluarga, tingkat akademik, dan status santri/siswa.
+
+## Apa Itu Manajemen Santri/Siswa?
+
+Manajemen santri/siswa mencakup:
+- **Biodata:** Nama, tanggal lahir, jenis kelamin, alamat, NIS
+- **Keluarga:** Data ayah, ibu, wali, kontak darurat
+- **Akademik:** Kelas, major/jurusan, status (aktif, alumni, keluar)
+- **Status Sistem:** User account di portal orang tua, akses awal
+
+Semua data santri/siswa adalah **fondasi** untuk modul lainnya (presensi, hafalan, tagihan, dll).
+
+## Cara Menggunakan
+
+### Input Data Santri/Siswa Satu Per Satu
+
+<Steps>
+  <Step title="Buka Santri/Siswa → Daftar Santri">
+    Di admin panel, tekan **+ Santri/Siswa Baru**.
+  </Step>
+
+  <Step title="Isi data biodata">
+    - **Nama Lengkap:** Nama santri/siswa lengkap
+    - **Jenis Kelamin:** Laki-laki / Perempuan
+    - **NIS:** Nomor Induk Santri/Siswa (unik per lembaga)
+    - **Tanggal Lahir:** Format: DD/MM/YYYY
+    - **Tempat Lahir:** Kota kelahiran
+    - **Alamat:** Alamat tempat tinggal
+    - **No. Telepon:** Kontak santri/siswa
+  </Step>
+
+  <Step title="Isi data keluarga">
+    - **Ayah:** Nama lengkap, pekerjaan, kontak
+    - **Ibu:** Nama lengkap, pekerjaan, kontak
+    - **Wali (jika ada):** Nama, relasi, kontak
+    - **Kontak Darurat:** Nama & no. telepon orang yang bisa dihubungi jika emergency
+
+    <Tip>
+    Semakin lengkap data keluarga, semakin mudah komunikasi dengan orang tua.
+    </Tip>
+  </Step>
+
+  <Step title="Isi akademik & status">
+    - **Tahun Ajaran:** Pilih tahun akademik
+    - **Kelas:** Pilih kelas santri/siswa
+    - **Major/Jurusan:** Opsional, jika lembaga punya program khusus
+    - **Status:** "Aktif", "Cuti", "Keluar", "Alumni"
+    - **Tanggal Masuk:** Kapan santri/siswa mulai di lembaga
+  </Step>
+
+  <Step title="Set akses portal orang tua">
+    - **Buat User Account:** Centang untuk otomatis buat akun di portal
+    - **Username:** Email orang tua (untuk login portal)
+    - **Password:** Auto-generate atau set manual
+
+    Orang tua akan login ke portal dengan email & password ini untuk lihat data santri/siswa.
+
+    <Warning>
+    Pastikan email orang tua valid. Password akan dikirim ke email mereka.
+    </Warning>
+  </Step>
+
+  <Step title="Simpan">
+    Tekan **Simpan** atau **Simpan & Tambah Lagi** untuk input santri/siswa berikutnya.
+  </Step>
+</Steps>
+
+### Import Data Massal dari Excel
+
+Untuk input banyak santri/siswa sekaligus:
+
+<Steps>
+  <Step title="Buka Santri/Siswa → Import Data">
+    Tekan **Import dari Excel**.
+  </Step>
+
+  <Step title="Download template Excel">
+    Sistem akan memberikan file template dengan kolom-kolom:
+    - Nama Lengkap
+    - NIS
+    - Jenis Kelamin
+    - Tanggal Lahir
+    - Alamat
+    - Nama Ayah
+    - Kontak Ayah
+    - Nama Ibu
+    - Kontak Ibu
+    - Kelas
+    - Status
+
+    Download dan isi template ini.
+  </Step>
+
+  <Step title="Isi data di Excel">
+    - Satu santri/siswa per baris
+    - Pastikan format konsisten (tanggal: DD/MM/YYYY)
+    - Jangan ubah nama kolom
+    - Kolom yang kosong akan diabaikan (opsional)
+
+    <Tip>
+    Pastikan NIS unik untuk setiap santri/siswa. Sistem tidak akan import jika ada duplikasi.
+    </Tip>
+  </Step>
+
+  <Step title="Upload file Excel">
+    Tekan **Pilih File** dan upload file yang sudah diisi. Sistem akan validasi dan preview data.
+  </Step>
+
+  <Step title="Verifikasi preview">
+    Cek data di preview untuk memastikan benar. Tekan **Import** jika sudah benar.
+  </Step>
+
+  <Step title="Akun portal otomatis dibuat">
+    Sistem otomatis buat akun portal orang tua dengan email + password. Password akan dikirim ke orang tua via email yang dikonfigurasi di SMTP.
+  </Step>
+</Steps>
+
+### Edit & Hapus Data Santri/Siswa
+
+<Steps>
+  <Step title="Buka daftar santri/siswa">
+    Di **Santri/Siswa → Daftar**, cari santri/siswa yang ingin diedit.
+  </Step>
+
+  <Step title="Pilih Edit atau Hapus">
+    - **Edit:** Ubah data apapun
+    - **Hapus:** Hapus santri/siswa (tidak bisa dibatalkan)
+
+    <Snippet file="warning-hapus-data.mdx" />
+  </Step>
+
+  <Step title="Jika edit, ubah data yang perlu">
+    Cukup ubah field yang berubah, field lain otomatis tetap.
+  </Step>
+
+  <Step title="Simpan">
+    Tekan **Simpan** atau **Simpan & Lanjut**.
+  </Step>
+</Steps>
+
+### Set Status Santri/Siswa
+
+Status santri/siswa penting untuk tracking:
+- **Aktif:** Sedang sekolah/pesantren
+- **Cuti:** Sedang tidak sekolah sementara (belum alumni)
+- **Keluar:** Berhenti sekolah (tidak lulus, pindah, dsb)
+- **Alumni:** Sudah lulus dan selesai
+
+<Steps>
+  <Step title="Lihat detail santri/siswa">
+    Di daftar, tekan nama santri/siswa untuk buka detail.
+  </Step>
+
+  <Step title="Ubah status">
+    Cari field **Status**, ubah sesuai kondisi saat ini.
+  </Step>
+
+  <Step title="Simpan">
+    Perubahan status otomatis akan mempengaruhi data lainnya (tagihan, presensi, dll).
+  </Step>
+</Steps>
+
+## Hal yang Perlu Diperhatikan
+
+<Warning>
+**Jangan hapus santri/siswa yang sudah ada tagihan atau presensi.** Jika ada kesalahan data, gunakan **Edit** bukan **Hapus**. Penghapusan bisa menyebabkan data presensi/tagihan tidak tertaut dengan benar.
+
+Jika benar-benar perlu dihapus, gunakan **Ubah Status → Keluar** dulu, baru hapus jika data sudah di-backup.
+</Warning>
+
+<Tip>
+**Best Practice:**
+1. Import data massal di awal tahun ajaran, bukan input satu-satu
+2. Pastikan NIS unik dan jangan ganti-ganti
+3. Update status santri/siswa saat ada perubahan (keluar, cuti, lulus)
+4. Backup data ke Excel setiap bulan untuk safety
+</Tip>
+
+## Pertanyaan Umum
+
+<AccordionGroup>
+  <Accordion title="Apakah bisa ubah NIS setelah santri/siswa dibuat?">
+    Ya, tapi tidak disarankan. Ubah NIS hanya jika ada typo. Jika sudah ada data presensi/tagihan, sebaiknya buat santri/siswa baru saja.
+  </Accordion>
+
+  <Accordion title="Bagaimana jika orang tua lupa password portal?">
+    Orang tua bisa tekan **"Lupa Password?"** di halaman login portal dan reset via email. Jika email tidak sampai, cek setting SMTP di admin lembaga.
+  </Accordion>
+
+  <Accordion title="Bisa set orang tua yang sama untuk beberapa santri/siswa?">
+    Ya, satu orang tua bisa punya multiple akun (satu akun per santri/siswa anak mereka). Setiap akun terpisah, tapi mereka bisa login dengan email berbeda.
+
+    Atau, jika ingin satu akun untuk multiple anak, hubungi support untuk custom setup.
+  </Accordion>
+
+  <Accordion title="Bagaimana jika santri/siswa pindah kelas?">
+    Di detail santri/siswa, ubah field **Kelas** ke kelas baru. Otomatis semua presensi dan hafalan akan update kelasnya.
+  </Accordion>
+
+  <Accordion title="Apakah ada maximum jumlah santri/siswa per paket?">
+    Tergantung paket subscription. Paket Free terbatas, Basic/Pro/Enterprise tidak terbatas. Cek [halaman paket →](/subscription/paket-harga).
+  </Accordion>
+</AccordionGroup>
+
+## Langkah Berikutnya
+
+- [Presensi & Absensi →](/panduan-admin/presensi)
+- [Manajemen SPP & Keuangan →](/panduan-admin/spp-dan-keuangan)
+- [Hafalan Quran →](/panduan-admin/hafalan)

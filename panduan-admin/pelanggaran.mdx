@@ -1,0 +1,153 @@
+---
+title: "Disiplin: Pelanggaran & Prestasi"
+description: "Catat pelanggaran santri/siswa, kelola sanksi berbasis poin, dan track prestasi."
+---
+
+# Disiplin: Pelanggaran & Prestasi
+
+Modul disiplin memungkinkan admin untuk mencatat pelanggaran dan prestasi santri/siswa. Sistem ini berbasis **poin**—setiap pelanggaran atau prestasi memiliki nilai poin yang terakumulasi.
+
+## Apa Itu Sistem Disiplin?
+
+Sistem disiplin Mazid mencakup:
+- **Jenis Pelanggaran:** Tele (terlambat), tidak mengerjakan PR, bolos, dll dengan poin masing-masing
+- **Input Pelanggaran:** Pengajar atau admin catat pelanggaran santri/siswa
+- **Sanksi:** Otomatis atau manual sesuai total poin
+- **Prestasi:** Track pencapaian positif (medali, award, dll)
+- **Dashboard:** Orang tua bisa lihat poin dan prestasi anak di portal
+
+## Cara Menggunakan
+
+### Setup Jenis Pelanggaran
+
+<Steps>
+  <Step title="Buka Disiplin → Jenis Pelanggaran">
+    Tekan **+ Jenis Baru**.
+  </Step>
+
+  <Step title="Isi detail jenis pelanggaran">
+    - **Nama:** "Telat", "Tidak Mengerjakan PR", "Tidak Rapih", dll
+    - **Poin:** Berapa poin pelanggaran ini (contoh: 5 poin)
+    - **Kategori:** Kategori pelanggaran (Akademik, Disiplin, Kebersihan, dll)
+    - **Deskripsi:** Detail pelanggaran
+  </Step>
+
+  <Step title="Simpan">
+    Tekan **Simpan**.
+  </Step>
+</Steps>
+
+### Input Pelanggaran Santri/Siswa
+
+<Steps>
+  <Step title="Buka Disiplin → Catatan Pelanggaran">
+    Tekan **+ Pelanggaran Baru**.
+  </Step>
+
+  <Step title="Pilih santri/siswa & jenis pelanggaran">
+    - Santri/siswa mana yang berpelanggaran
+    - Jenis pelanggaran apa
+    - Poin otomatis terisi berdasarkan jenis
+  </Step>
+
+  <Step title="Isi detail">
+    - **Tanggal:** Kapan pelanggaran terjadi
+    - **Catatan:** Deskripsi detail pelanggaran
+    - **Pengajar:** Siapa yang catat
+  </Step>
+
+  <Step title="Simpan">
+    Tekan **Simpan**. Poin otomatis terakumulasi di dashboard santri/siswa.
+  </Step>
+</Steps>
+
+### Setup Sanksi Otomatis
+
+<Steps>
+  <Step title="Buka Disiplin → Aturan Sanksi">
+    Tekan **+ Aturan Baru**.
+  </Step>
+
+  <Step title="Atur kondisi sanksi">
+    - **Jika Poin Mencapai:** 50 poin, 100 poin, dll
+    - **Maka Sanksi:** Peringatan Lisan, Peringatan Tertulis, Orang Tua Dipanggil, Skorsing, dll
+  </Step>
+
+  <Step title="Simpan">
+    Sistem otomatis trigger sanksi saat santri/siswa mencapai threshold poin.
+  </Step>
+</Steps>
+
+### Input Prestasi Santri/Siswa
+
+<Steps>
+  <Step title="Buka Disiplin → Prestasi">
+    Tekan **+ Prestasi Baru**.
+  </Step>
+
+  <Step title="Pilih santri/siswa">
+    Santri/siswa yang meraih prestasi.
+  </Step>
+
+  <Step title="Isi detail prestasi">
+    - **Nama Prestasi:** "Juara Kelas Hafalan", "Pelajar Teladan", dll
+    - **Tanggal:** Kapan prestasi diraih
+    - **Sertifikat:** Upload file sertifikat atau penghargaan (opsional)
+  </Step>
+
+  <Step title="Simpan">
+    Tekan **Simpan**. Prestasi akan tampil di portal orang tua.
+  </Step>
+</Steps>
+
+### Monitor Dashboard Disiplin
+
+<Steps>
+  <Step title="Buka Disiplin → Dashboard">
+    Lihat ringkasan poin dan sanksi semua santri/siswa dalam satu tampilan.
+  </Step>
+
+  <Step title="Identifikasi santri/siswa dengan poin tinggi">
+    Jika ada yang mendekati threshold sanksi, proaktif hubungi orang tua untuk komunikasi & intervensi.
+  </Step>
+
+  <Step title="Export laporan">
+    Tekan **Export** untuk laporan disiplin per santri/siswa atau per kelas.
+  </Step>
+</Steps>
+
+## Hal yang Perlu Diperhatikan
+
+<Warning>
+**Jangan gunakan sistem disiplin sebagai balas dendam.** Catat pelanggaran secara objektif dan adil. Konsistensi dalam penerapan adalah kunci agar santri/siswa merasa adil.
+</Warning>
+
+<Tip>
+**Best Practice:**
+1. Libatkan santri/siswa & orang tua dalam komunikasi disiplin
+2. Jangan langsung kasih sanksi berat—mulai dari peringatan
+3. Monitor poin dan komunikasikan progress dengan orang tua
+4. Rayakan prestasi santri/siswa, jangan hanya fokus pada pelanggaran
+5. Review aturan disiplin setiap semester
+</Tip>
+
+## Pertanyaan Umum
+
+<AccordionGroup>
+  <Accordion title="Bisa kurangi poin pelanggaran jika santri/siswa berubah?">
+    Sistem tidak punya fitur "kurangi poin" otomatis. Jika santri/siswa sudah berubah signifikan, bisa reset poin manual atau konsultasi dengan leadership lembaga.
+  </Accordion>
+
+  <Accordion title="Apakah orang tua bisa lihat pelanggaran anak?">
+    Ya, di portal ada menu **Disiplin** untuk lihat pelanggaran dan prestasi. Transparansi ini penting untuk komunikasi dengan orang tua.
+  </Accordion>
+
+  <Accordion title="Bagaimana jika ada sengketa soal pelanggaran?">
+    Sebaiknya ada **mekanisme banding** yang jelas. Santri/siswa atau orang tua bisa ajukan banding dengan bukti jika merasa tidak adil. Admin perlu review & keputusan fair.
+  </Accordion>
+</AccordionGroup>
+
+## Langkah Berikutnya
+
+- [Laporan & Analytics →](/panduan-admin/laporan)
+- [Manajemen Keuangan →](/panduan-admin/spp-dan-keuangan)

@@ -1,0 +1,230 @@
+---
+title: "Upgrade & Downgrade Paket"
+description: "Cara mengubah paket subscription sesuai kebutuhan lembaga."
+---
+
+# Upgrade & Downgrade Paket Subscription
+
+Admin dapat mengubah paket subscription kapan saja sesuai perkembangan lembaga. Tidak ada komitmen jangka panjang—100% flexible.
+
+## Upgrade ke Paket Lebih Tinggi
+
+### Kapan Perlu Upgrade?
+
+Upgrade paket jika:
+- ✅ Santri/siswa sudah melebihi max paket saat ini
+- ✅ Butuh fitur yang tidak ada di paket saat ini (contoh: PPDB online)
+- ✅ Lembaga berkembang & butuh support lebih baik
+
+### Cara Upgrade
+
+<Steps>
+  <Step title="Login ke admin panel">
+    Masukkan email & password admin lembaga.
+  </Step>
+
+  <Step title="Buka Pengaturan → Subscription">
+    Di sidebar menu, tekan **Pengaturan** → **Subscription & Billing**.
+  </Step>
+
+  <Step title="Lihat paket saat ini">
+    Sistem menampilkan:
+    - **Paket Aktif:** Paket saat ini (contoh: "Basic")
+    - **Tanggal Renewal:** Kapan renewal/tagihan berikutnya
+    - **Harga Saat Ini:** Biaya per bulan
+  </Step>
+
+  <Step title="Tekan tombol Upgrade">
+    Tekan **"Upgrade ke paket lebih tinggi"** atau **"Lihat paket lainnya"**.
+  </Step>
+
+  <Step title="Pilih paket target">
+    Review daftar paket dengan fitur & harga masing-masing:
+    - **Free** → **Basic**
+    - **Basic** → **Pro**
+    - **Pro** → **Enterprise**
+
+    Atau custom upgrade lainnya. Tekan paket yang dipilih.
+  </Step>
+
+  <Step title="Review perubahan harga">
+    Sistem menampilkan:
+    - **Paket Saat Ini:** Basic (Rp 200.000/bulan)
+    - **Paket Baru:** Pro (Rp 600.000/bulan)
+    - **Selisih Harga:** Rp 400.000 (akan ditagih prorata untuk sisa bulan)
+    - **Tanggal Efektif:** Kapan upgrade mulai berlaku
+
+    <Tip>
+    Upgrade berlaku **immediate** — bukan tunggu renewal bulan depan. Harga prorata akan dicharge segera.
+    </Tip>
+  </Step>
+
+  <Step title="Konfirmasi & bayar">
+    Tekan **"Konfirmasi Upgrade"**. Sistem akan:
+    - Generate invoice untuk biaya prorata (jika ada)
+    - Kirim email dengan detail upgrade
+    - Aktivasi fitur paket baru segera
+
+    Pembayaran bisa via:
+    - Transfer bank
+    - QRIS
+    - E-wallet (jika available)
+    - Auto-debit (jika setup)
+  </Step>
+
+  <Step title="Verifikasi upgrade selesai">
+    Cek kembali di menu Subscription—paket harusnya sudah berubah ke paket baru.
+
+    Test fitur baru yang belum ada sebelumnya (contoh: PPDB, jika upgrade ke Pro).
+  </Step>
+</Steps>
+
+## Downgrade ke Paket Lebih Rendah
+
+### Kapan Perlu Downgrade?
+
+Downgrade paket jika:
+- 📉 Santri/siswa berkurang signifikan
+- 💰 Ingin hemat biaya
+- ❌ Tidak butuh fitur paket saat ini
+
+### Cara Downgrade
+
+<Steps>
+  <Step title="Buka Pengaturan → Subscription">
+    Sama seperti upgrade, buka menu Subscription.
+  </Step>
+
+  <Step title="Tekan tombol Downgrade">
+    Tekan **"Downgrade ke paket lebih rendah"** atau **"Lihat paket lainnya"**.
+  </Step>
+
+  <Step title="Pilih paket target">
+    Review paket yang lebih rendah.
+
+    <Warning>
+    **PENTING:** Sebelum downgrade, pastikan:
+    - Jumlah santri/siswa ≤ max paket target
+    - Tidak perlu fitur yang akan hilang (contoh: downgrade Pro ke Basic = hilang PPDB)
+    - Backup data penting jika perlu
+
+    Hubungi support jika tidak yakin.
+    </Warning>
+  </Step>
+
+  <Step title="Tekan paket downgrade">
+    Pilih paket target & tekan tombol downgrade.
+  </Step>
+
+  <Step title="Review perubahan & dampak">
+    Sistem menampilkan:
+    - **Paket Baru:** Paket target (contoh: Basic dari Pro)
+    - **Fitur yang Akan Hilang:** Daftar fitur yang tidak available di paket baru
+    - **Refund (jika ada):** Selisih harga akan dikembalikan untuk sisa bulan
+    - **Tanggal Efektif:** Kapan downgrade berlaku
+
+    <Tip>
+    Downgrade biasanya berlaku **akhir bulan saat ini** atau **awal bulan depan** (tergantung periode billing). Admin bisa pilih timing.
+    </Tip>
+  </Step>
+
+  <Step title="Konfirmasi downgrade">
+    Baca peringatan dengan seksama. Tekan **"Konfirmasi Downgrade"** jika yakin.
+
+    Sistem akan:
+    - Kirim email konfirmasi
+    - Generate refund invoice (jika ada saldo)
+    - Disable fitur yang tidak available di paket baru pada tanggal efektif
+  </Step>
+
+  <Step title="Verifikasi downgrade">
+    Cek menu Subscription untuk confirm paket sudah berubah.
+
+    Jika ada data yang terdampak (contoh: PPDB dimatikan saat downgrade Pro → Basic), backup dulu sebelum downgrade efektif.
+  </Step>
+</Steps>
+
+## Scenario Khusus
+
+### Saat Downgrade, Ada Fitur yang Hilang (Contoh: PPDB)
+
+Jika lembaga downgrade Pro → Basic, fitur PPDB akan hilang:
+
+| Aksi | Timeline |
+|------|----------|
+| Downgrade diconfirm | Hari ini |
+| PPDB masih aktif (grace period) | Selama sisa bulan |
+| PPDB dinonaktifkan | Awal bulan depan (atau sesuai billing cycle) |
+
+**Best Practice:**
+1. **Backup data PPDB** sebelum downgrade (export data pendaftar)
+2. Finish semester / periode PPDB saat ini dulu
+3. Downgrade setelah periode selesai
+
+### Dari Free → Paid Plan (First Payment)
+
+Saat upgrade dari Free:
+
+<Steps>
+  <Step title="Pilih paket berbayar">
+    Pilih Basic, Pro, atau Enterprise.
+  </Step>
+
+  <Step title="Input metode pembayaran">
+    - **One-time payment:** Bayar per invoice (bulanan)
+    - **Auto-debit:** Setup kartu kredit untuk auto-charge setiap bulan (lebih mudah)
+  </Step>
+
+  <Step title="Bayar & verifikasi">
+    Ikuti instruksi pembayaran. Setelah terverifikasi, paket langsung aktif.
+  </Step>
+
+  <Step title="Set billing reminder">
+    Agar tidak lupa, admin bisa set email reminder sebelum renewal date.
+  </Step>
+</Steps>
+
+### Bila Ada Tunggakan Pembayaran
+
+Jika invoice tidak dibayar sampai deadline:
+
+| Status | Aksi |
+|--------|------|
+| **Overdue < 7 hari** | Email reminder dikirim |
+| **Overdue 7-14 hari** | Email escalation + notifikasi di admin dashboard |
+| **Overdue > 14 hari** | Fitur berbayar akan di-suspend sampai bayar arrears |
+
+<Warning>
+**Jangan biarkan overdue membesar.** Hubungi support jika ada kesulitan pembayaran—ada opsi payment plan.
+</Warning>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Berapa biaya untuk upgrade/downgrade?">
+    Tidak ada biaya administrasi. Hanya selisih harga produk yang dicharge/direfund (prorata untuk sisa hari di bulan berjalan).
+  </Accordion>
+
+  <Accordion title="Apakah upgrade/downgrade bisa instant?">
+    **Upgrade:** Instant (langsung aktif setelah bayar)
+    **Downgrade:** Biasanya akhir bulan saat ini atau awal bulan depan (sesuai billing cycle), tapi bisa request untuk timing berbeda.
+  </Accordion>
+
+  <Accordion title="Bagaimana jika santri/siswa melebihi limit paket?">
+    Sistem akan **notifikasi** untuk upgrade. Jika tidak upgrade dalam waktu tertentu, beberapa fitur bisa jadi terbatas. Hubungi support untuk diskusi.
+  </Accordion>
+
+  <Accordion title="Bisa request paket custom (Enterprise)?">
+    Ya! Hubungi **sales@mazid.id** untuk diskusi kebutuhan custom. Tim akan bikin proposal sesuai requirement lembaga.
+  </Accordion>
+
+  <Accordion title="Apakah ada garansi uang kembali (money-back guarantee)?">
+    Mazid tidak punya formal money-back guarantee, tapi jika ada issue atau tidak satisfied, hubungi support untuk diskusi solusi (contoh: partial refund, extension trial, etc).
+  </Accordion>
+</AccordionGroup>
+
+## Langkah Berikutnya
+
+- [Kembali ke Paket Harga →](/subscription/paket-harga)
+- [Daftar Mazid Sekarang →](https://mazid.id/daftar)
+- [Hub Kami untuk Pertanyaan →](mailto:sales@mazid.id)

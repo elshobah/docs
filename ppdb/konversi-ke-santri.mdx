@@ -1,0 +1,194 @@
+---
+title: "Konversi Pendaftar Diterima ke Santri/Siswa Aktif"
+description: "Admin: Ubah status pendaftar yang diterima menjadi santri/siswa aktif di sistem."
+---
+
+# Konversi Pendaftar ke Santri/Siswa Aktif
+
+Setelah calon santri/siswa **DITERIMA**, admin perlu melakukan konversi—mengubah status mereka menjadi santri/siswa aktif yang bisa mulai sekolah.
+
+## Proses Konversi
+
+### Persiapan Konversi
+
+Sebelum konversi, pastikan:
+- ✅ Calon santri/siswa sudah lolos ujian (status: "Accepted")
+- ✅ Semua pembayaran sudah terverifikasi
+- ✅ Dokumen lengkap dan sudah diverifikasi
+- ✅ Tahun ajaran sudah dibuat di sistem
+- ✅ Kelas tujuan sudah dibuat
+
+### Cara Menggunakan
+
+<Steps>
+  <Step title="Buka PPDB → Daftar Pendaftar">
+    Di admin panel, tekan **PPDB** → **Daftar Pendaftar**.
+  </Step>
+
+  <Step title="Filter pendaftar yang diterima">
+    Filter berdasarkan:
+    - **Status:** Pilih "Accepted" (Diterima)
+    - **Periode:** Pilih periode PPDB
+    - **Tahun Ajaran:** Pilih tahun tujuan
+
+    Sistem akan list semua pendaftar yang diterima.
+  </Step>
+
+  <Step title="Pilih pendaftar untuk konversi">
+    Tekan checkbox di sebelah nama calon santri/siswa yang ingin dikonversi.
+
+    Bisa pilih multiple sekaligus (konversi massal) atau satu per satu.
+  </Step>
+
+  <Step title="Tekan tombol Konversi ke Santri">
+    Setelah pilih, tekan **Konversi ke Santri/Siswa Aktif**.
+
+    Sistem akan tampilkan dialog konfirmasi:
+    - Berapa calon yang akan dikonversi
+    - Apakah sudah yakin
+
+    Tekan **Konfirmasi**.
+  </Step>
+
+  <Step title="Sistem otomatis membuat data santri/siswa">
+    Sistem akan:
+    - ✅ Buat record santri/siswa baru dengan data dari pendaftaran
+    - ✅ Set status santri/siswa menjadi "Aktif"
+    - ✅ Assign ke kelas dan tahun ajaran yang dipilih
+    - ✅ Generate NIS otomatis (atau admin bisa set manual)
+    - ✅ Buat akun portal orang tua (dengan email & password auto)
+
+    <Tip>
+    NIS otomatis generate dengan format: [Tahun][Urutan] (contoh: 20240001, 20240002, dll). Admin bisa ubah manual jika ingin format berbeda.
+    </Tip>
+  </Step>
+
+  <Step title="Verifikasi data santri/siswa baru">
+    Setelah konversi selesai, cek data santri/siswa baru:
+    - Buka **Santri/Siswa → Daftar Santri**
+    - Cari nama calon santri/siswa yang baru saja dikonversi
+    - Pastikan data biodata, keluarga, NIS, kelas semua benar
+
+    Edit jika ada yang perlu diperbaiki.
+  </Step>
+
+  <Step title="Kirim akun portal orang tua">
+    Sistem otomatis generate akun portal dengan:
+    - Email: Email orang tua dari pendaftaran
+    - Password: Auto-generate atau admin set manual
+
+    Orang tua akan dapat email berisi:
+    - Link login: `namalembaga.mazid.id`
+    - Username (email)
+    - Password
+
+    <Warning>
+    Pastikan email SMTP sudah dikonfigurasi agar email terkirim ke orang tua.
+    </Warning>
+  </Step>
+
+  <Step title="Verifikasi status pendaftaran berubah ke Converted">
+    Buka kembali **PPDB → Daftar Pendaftar** untuk verifikasi:
+    - Status pendaftar sudah berubah menjadi **"Converted"**
+    - Data santri/siswa baru sudah muncul di Santri/Siswa
+
+    Jika gagal, error message akan tampil. Contact support jika ada issue.
+  </Step>
+</Steps>
+
+## Konversi Massal
+
+Untuk konversi banyak pendaftar sekaligus:
+
+<Steps>
+  <Step title="Filter pendaftar yang diterima">
+    Gunakan filter yang sama seperti langkah sebelumnya.
+  </Step>
+
+  <Step title="Pilih semua">
+    Tekan checkbox di header table untuk select **semua** pendaftar yang filter.
+
+    Atau pilih manual dengan ctrl+click (Windows) atau cmd+click (Mac).
+  </Step>
+
+  <Step title="Tekan Konversi Massal">
+    Tekan tombol **Konversi Massal ke Santri/Siswa**.
+  </Step>
+
+  <Step title="Tunggu proses selesai">
+    Sistem akan konversi satu per satu (bisa memakan waktu jika banyak).
+
+    Jangan refresh halaman selama proses berjalan.
+  </Step>
+
+  <Step title="Verifikasi hasil">
+    Setelah selesai, sistem akan tampilkan:
+    - Berapa banyak berhasil dikonversi
+    - Berapa banyak gagal (jika ada)
+
+    Review error untuk debugging jika ada gagal.
+  </Step>
+</Steps>
+
+## Troubleshooting Konversi
+
+### Konversi Gagal / Error
+
+Penyebab umum gagal konversi:
+
+| Error | Sebab | Solusi |
+|-------|-------|--------|
+| "NIS sudah ada" | NIS yang dibuat sudah duplicate | Ubah NIS ke nomor lain yang belum terdaftar |
+| "Email orang tua invalid" | Email tidak valid | Edit email di data pendaftar dulu |
+| "SMTP tidak dikonfigurasi" | Email SMTP belum setup | Konfigurasi SMTP di Pengaturan dulu |
+| "Kelas tidak ditemukan" | Kelas tidak ada | Buat kelas yang sesuai di Master Data dulu |
+
+### Konversi Ternyata Salah / Ingin Batalkan
+
+Jika sudah konversi tapi ingin batalkan:
+
+1. **Hapus data santri/siswa yang baru** di menu Santri/Siswa
+2. **Edit status pendaftar** kembali ke "Accepted" via PPDB
+3. Konversi ulang dengan data yang benar
+
+<Warning>
+Penghapusan santri/siswa akan ikut hapus semua data terkait (presensi, tagihan, dll). Hati-hati dengan aksi ini.
+</Warning>
+
+## Best Practice
+
+<Tip>
+**Tips untuk konversi yang sukses:**
+1. Pastikan semua data pendaftar **100% benar** sebelum konversi
+2. Konversi saat **semua persiapan selesai** (kelas, tahun ajaran, dll)
+3. **Test dulu** dengan satu pendaftar untuk pastikan prosesnya lancar
+4. **Konversi massal** di akhir periode PPDB untuk menghemat waktu
+5. **Archive data PPDB** setelah konversi selesai (untuk referensi nanti)
+6. Hubungi orang tua setelah konversi selesai untuk pastikan mereka dapat akun portal
+</Tip>
+
+## Pertanyaan Umum
+
+<AccordionGroup>
+  <Accordion title="Bagaimana jika calon santri/siswa yang diterima tidak jadi masuk?">
+    Ubah status santri/siswa menjadi **"Keluar"** atau **"Batal"** di menu Santri/Siswa. Data akan tetap tersimpan untuk referensi, tapi tidak aktif.
+  </Accordion>
+
+  <Accordion title="Bisa konversi calon yang statusnya Waitlist?">
+    Tergantung policy lembaga. Jika ingin accept dari waitlist, admin bisa manual ubah status pendaftar dari "Waitlist" ke "Accepted" dulu, baru konversi.
+  </Accordion>
+
+  <Accordion title="Apakah NIS bisa diubah setelah konversi?">
+    Ya, di menu Santri/Siswa, tekan **Edit** dan ubah NIS ke nomor yang baru. NIS hanya harus unik per lembaga.
+  </Accordion>
+
+  <Accordion title="Bagaimana jika ada pendaftar yang belum bisa konversi (dokumen masih pending)?">
+    Jangan konversi dulu. Tunggu sampai dokumen lengkap & diverifikasi. Ubah status pendaftar ke "Accepted" dulu, baru konversi setelah semuanya siap.
+  </Accordion>
+</AccordionGroup>
+
+## Langkah Berikutnya
+
+- [Manajemen Santri/Siswa Aktif →](/panduan-admin/manajemen-santri)
+- [Input Presensi & Absensi →](/panduan-admin/presensi)
+- [Buat Tagihan SPP →](/panduan-admin/spp-dan-keuangan)

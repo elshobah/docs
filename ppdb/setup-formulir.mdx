@@ -1,0 +1,160 @@
+---
+title: "Setup Formulir PPDB"
+description: "Buat dan konfigurasi formulir pendaftaran PPDB online untuk lembaga."
+---
+
+# Setup Formulir PPDB
+
+Admin dapat membuat dan customize formulir pendaftaran PPDB sesuai kebutuhan lembaga.
+
+## Cara Menggunakan
+
+<Steps>
+  <Step title="Buka PPDB → Formulir PPDB">
+    Tekan **+ Formulir Baru**.
+  </Step>
+
+  <Step title="Isi detail formulir">
+    - **Nama Formulir:** "PPDB 2024/2025", "Pendaftaran Tahun Ajaran 2024", dll
+    - **Tahun Ajaran:** Pilih tahun yang sesuai
+    - **Periode Pendaftaran:** Dari tanggal - sampai tanggal
+    - **Status:** Draft atau Published
+    - **Deskripsi:** Penjelasan singkat tentang formulir
+  </Step>
+
+  <Step title="Setup kuota dan biaya">
+    - **Kuota Total:** Berapa calon santri/siswa yang bisa diterima
+    - **Biaya Pendaftaran:** Nominal yang harus dibayar (bisa Rp 0 jika gratis)
+    - **Kelas Target:** Kelas mana yang dilamar
+  </Step>
+
+  <Step title="Customize pertanyaan formulir">
+    Sistem sudah punya pertanyaan standar (nama, tempat lahir, alamat, dll). Admin bisa:
+    - **Tambah pertanyaan custom** dengan tipe: Text, Multiple Choice, File Upload
+    - **Edit pertanyaan** yang sudah ada
+    - **Delete pertanyaan** yang tidak perlu
+    - **Atur urutan** pertanyaan dengan drag-drop
+
+    <Tip>
+    Jangan terlalu banyak pertanyaan (max 20 pertanyaan). Buat form yang singkat agar calon santri/siswa cepat selesai daftar.
+    </Tip>
+  </Step>
+
+  <Step title="Setup dokumen yang harus diupload">
+    Tentukan dokumen apa saja yang harus diupload calon santri/siswa:
+    - Kartu Keluarga (KK)
+    - Ijazah terakhir
+    - Akte kelahiran
+    - Foto santri/siswa
+    - Surat kesehatan
+    - Dokumen lainnya (custom)
+
+    Setiap dokumen bisa diset sebagai "Required" (wajib) atau "Optional" (pilihan).
+  </Step>
+
+  <Step title="Setup ujian (opsional)">
+    Jika ada ujian seleksi:
+    - **Jenis Ujian:** Online test, Offline test (datang ke lokasi), Wawancara
+    - **Jadwal Ujian:** Tanggal & waktu
+    - **Materi Ujian:** Apa yang akan ditanya
+    - **Lokasi:** Jika offline (alamat, ruangan)
+    - **Durasi:** Berapa menit untuk ujian
+  </Step>
+
+  <Step title="Setup notifikasi">
+    Tentukan notifikasi otomatis yang dikirim:
+    - Saat pendaftaran diterima/ditolak
+    - Saat ada verifikasi pembayaran
+    - Saat jadwal ujian dikonfirmasi
+    - Saat hasil ujian sudah keluar
+
+    Notifikasi bisa via Email atau WhatsApp (jika dikonfigurasi).
+  </Step>
+
+  <Step title="Publish formulir">
+    Saat siap, ubah status ke **Published**. Formulir akan mendapat link publik yang bisa dibagikan ke calon santri/siswa.
+
+    <Tip>
+    Simpan link formulir ini dan bagikan via WhatsApp, Instagram, website lembaga, dll.
+    </Tip>
+  </Step>
+
+  <Step title="Bagikan link formulir">
+    Link akan berbentuk: `app.mazid.id/ppdb/[kode-formulir]`
+
+    Admin bisa share link via:
+    - WhatsApp / Telegram
+    - Instagram / Facebook
+    - Website lembaga
+    - Poster atau brosur cetak dengan QR code
+  </Step>
+</Steps>
+
+## Contoh Struktur Formulir
+
+### Tab 1: Biodata Calon Santri/Siswa
+- Nama Lengkap
+- Tanggal Lahir
+- Jenis Kelamin
+- Asal Sekolah / Lembaga
+- Alamat
+
+### Tab 2: Data Keluarga
+- Nama Ayah
+- Pekerjaan Ayah
+- Nomor Telepon Ayah
+- Nama Ibu
+- Pekerjaan Ibu
+- Nomor Telepon Ibu
+
+### Tab 3: Data Kesehatan
+- Ada riwayat penyakit? (Yes/No)
+- Jenis penyakit (jika ada)
+- Alergi? (Yes/No)
+
+### Tab 4: Upload Dokumen
+- Kartu Keluarga (File upload)
+- Ijazah (File upload)
+- Foto 3x4 (File upload)
+- Surat kesehatan (File upload)
+
+### Tab 5: Review & Submit
+- Review semua data
+- Centang "Data sudah benar"
+- Tekan "Submit Pendaftaran"
+
+## Hal yang Perlu Diperhatikan
+
+<Warning>
+**Jangan publikasi formulir jika belum siap.** Status yang sudah "Published" tidak bisa kembali jadi "Draft". Jika ada kesalahan, buat formulir baru saja.
+</Warning>
+
+<Tip>
+**Best Practice:**
+1. Buat formulir minimal 1 minggu sebelum periode pendaftaran dimulai
+2. Test formulir sendiri untuk pastikan tidak ada error
+3. Bagikan link lewat berbagai channel (WA, media sosial, website)
+4. Set deadline pendaftaran yang jelas
+5. Siapkan tim untuk verifikasi dokumen calon santri/siswa
+</Tip>
+
+## Pertanyaan Umum
+
+<AccordionGroup>
+  <Accordion title="Bisa ubah formulir setelah dipublish?">
+    Tidak. Setelah publish, formulir tidak bisa diubah. Jika ada perubahan, buat formulir baru dan update link. Pendaftar lama tetap bisa lanjut dengan formulir lama mereka.
+  </Accordion>
+
+  <Accordion title="Bagaimana jika melampaui kuota pendaftar?">
+    Sistem akan auto-close pendaftaran jika kuota penuh. Pendaftar baru akan directed ke waitlist (daftar tunggu).
+  </Accordion>
+
+  <Accordion title="Bisa batalkan formulir yang sudah ada pendaftar?">
+    Ya, dengan hati-hati. Semua pendaftar akan notifikasi. Sebaiknya hubungi mereka terlebih dahulu sebelum batalkan.
+  </Accordion>
+</AccordionGroup>
+
+## Langkah Berikutnya
+
+- [Alur Pendaftar →](/ppdb/alur-pendaftar)
+- [Konversi ke Santri →](/ppdb/konversi-ke-santri)

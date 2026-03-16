@@ -1,0 +1,176 @@
+---
+title: "Mulai Cepat"
+description: "Onboarding 5 menit untuk admin pesantren, orang tua, dan pengajar."
+---
+
+# Mulai Cepat
+
+Pilih panduan sesuai dengan peran Anda di Mazid:
+
+<Tabs>
+  <Tab title="👨‍💼 Admin / Operator / Pengajar">
+    Anda mengelola platform di `/admin` untuk lembaga Anda.
+
+    ## Langkah-Langkah Setup
+
+    <Steps>
+      <Step title="Daftar lembaga di mazid.id">
+        Kunjungi [mazid.id/daftar](https://mazid.id/daftar) dan isi nama lembaga, email, dan password. Anda akan masuk ke dashboard admin.
+      </Step>
+
+      <Step title="Setup profil lembaga & branding">
+        Di `/admin`, pilih menu **Pengaturan → Profil Lembaga**. Isi:
+        - Nama lembaga lengkap
+        - Logo & warna tema (untuk portal orang tua)
+        - Alamat, telepon, email lembaga
+        - Konfigurasi SMTP untuk notifikasi email
+
+        <Tip>
+        Simpan logo dalam format SVG atau PNG untuk kualitas terbaik.
+        </Tip>
+      </Step>
+
+      <Step title="Tambah tahun ajaran dan kelas">
+        Di menu **Master Data → Tahun Ajaran**, buat tahun akademik baru (contoh: 2024/2025).
+
+        Lalu di **Master Data → Kelas**, buat kelas-kelas sesuai struktur lembaga Anda (contoh: Kelas 1, Kelas 2, dll).
+      </Step>
+
+      <Step title="Undang pengguna lain (operator, pengajar)">
+        Di menu **Pengaturan → Pengguna**, tekan **+ Tambah Pengguna** dan isi:
+        - Email pengguna
+        - Nama lengkap
+        - Peran (Admin, Operator, Pengajar)
+
+        Pengguna akan menerima email undangan dengan link untuk set password.
+
+        <Warning>
+        Setiap pengguna hanya bisa akses data lembaga ini. Tidak bisa akses lembaga lain.
+        </Warning>
+      </Step>
+
+      <Step title="Input data santri/siswa">
+        Di menu **Santri/Siswa → Daftar Santri**, tekan **+ Santri Baru** dan isi:
+        - Nama lengkap
+        - NIS (Nomor Induk Santri)
+        - Tanggal lahir, jenis kelamin
+        - Alamat
+        - Data wali (ayah, ibu, atau wali lainnya)
+
+        Atau impor dari file Excel untuk input massal.
+
+        <Tip>
+        Semakin lengkap data di awal, semakin mudah pengelolaan nanti.
+        </Tip>
+      </Step>
+
+      <Step title="Buat tagihan SPP pertama">
+        Di menu **Keuangan → Tagihan**, tekan **+ Tagihan Baru**:
+        - Pilih santri/siswa atau kelompok
+        - Tentukan nominal (contoh: Rp 500.000)
+        - Sistem otomatis membuat **kode unik 3-digit** untuk setiap santri/siswa
+
+        Santri/siswa dapat membayar dengan menambahkan kode unik ke nominal transfer. Contoh: Rp 500.**123** (kode unik: 123).
+
+        [Pelajari lebih lanjut tentang sistem kode unik →](/panduan-admin/spp-dan-keuangan)
+      </Step>
+    </Steps>
+
+    ## Langkah Berikutnya
+
+    <CardGroup cols={2}>
+      <Card title="Panduan Admin Lengkap" icon="book" href="/panduan-admin/setup-awal">
+        Jelajahi semua fitur dan modul di admin panel
+      </Card>
+      <Card title="Konfigurasi Pembayaran" icon="credit-card" href="/panduan-admin/spp-dan-keuangan">
+        Setup payment gateway (Duitku, dll) untuk menerima pembayaran online
+      </Card>
+    </CardGroup>
+  </Tab>
+
+  <Tab title="👨‍👩‍👧 Orang Tua / Wali">
+    Anda mengakses portal untuk melihat data anak dan melakukan pembayaran.
+
+    ## Langkah-Langkah
+
+    <Steps>
+      <Step title="Cari link portal lembaga">
+        Lembaga akan memberikan link portal unik mereka, format: **namalembaga.mazid.id** (contoh: pesantrenjaya.mazid.id).
+
+        Tanyakan ke admin lembaga atau lihat di dokumen pendaftaran Anda.
+      </Step>
+
+      <Step title="Login ke portal">
+        Di portal, gunakan:
+        - Email atau nomor identitas yang terdaftar
+        - Password yang diberikan admin lembaga
+
+        Jika lupa password, tekan **"Lupa Password?"** untuk reset via email.
+      </Step>
+
+      <Step title="Lihat data anak">
+        Setelah login, Anda akan melihat dashboard dengan ringkasan untuk setiap anak:
+        - **Tagihan SPP** yang belum lunas
+        - **Absensi** bulan ini
+        - **Saldo tabungan** santri/siswa
+        - **Catatan disiplin** (pelanggaran & prestasi)
+      </Step>
+
+      <Step title="Lakukan pembayaran">
+        Di menu **Tagihan**, pilih santri/siswa dan tekan **Bayar**. Anda akan melihat:
+        - Nominal tagihan
+        - Kode unik 3-digit (cara pembayaran otomatis)
+        - Pilihan metode pembayaran (transfer bank, QRIS, dll)
+
+        **Cara pembayaran dengan kode unik:**
+        - Transfer ke rekening lembaga
+        - Jumlah: nominal tagihan **+ kode unik**
+        - Contoh: tagihan Rp 500.000 + kode 123 = transfer Rp 500.123
+        - Sisa (Rp 123) otomatis masuk tabungan santri/siswa
+
+        [Pelajari lebih lanjut →](/portal-ortu/lihat-tagihan)
+      </Step>
+
+      <Step title="Monitor perkembangan anak">
+        Di menu **Santri/Siswa → [Nama Anak]**, lihat:
+        - Absensi dan perizinan (izin keluar/pulang)
+        - Hafalan Quran
+        - Catatan pelanggaran dan prestasi
+        - Riwayat pembayaran dan saldo tabungan
+      </Step>
+    </Steps>
+
+    ## Pertanyaan Umum
+
+    <AccordionGroup>
+      <Accordion title="Bagaimana jika lupa password?">
+        Di halaman login, tekan **"Lupa Password?"** dan ikuti instruksi di email. Link reset berlaku 24 jam.
+      </Accordion>
+
+      <Accordion title="Bisa bayar pakai QRIS atau e-wallet?">
+        Tergantung konfigurasi lembaga. Beberapa lembaga support QRIS, transfer bank, atau e-wallet. Lihat pilihan yang tersedia di menu **Tagihan**.
+      </Accordion>
+
+      <Accordion title="Apakah saya bisa lihat data santri/siswa anak saya saja?">
+        Ya, portal menampilkan data santri/siswa yang terdaftar sebagai anak Anda. Data santri/siswa lain tidak bisa dilihat.
+      </Accordion>
+    </AccordionGroup>
+
+    <CardGroup cols={2}>
+      <Card title="Portal Orang Tua Lengkap" icon="users" href="/portal-ortu/cara-akses">
+        Jelajahi semua fitur portal orang tua
+      </Card>
+      <Card title="Tracking PPDB" icon="graduation-cap" href="/portal-ortu/pantau-perkembangan">
+        Lihat status pendaftaran calon santri/siswa
+      </Card>
+    </CardGroup>
+  </Tab>
+</Tabs>
+
+---
+
+## Butuh Bantuan?
+
+- Lihat **FAQ** di setiap panduan
+- Hubungi lembaga Anda untuk bantuan teknis
+- Email: [shobah@inbox.mazid.id](mailto:shobah@inbox.mazid.id)

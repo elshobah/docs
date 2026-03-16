@@ -1,0 +1,171 @@
+---
+title: "Setup Awal Lembaga"
+description: "Langkah pertama setelah mendaftar: konfigurasi profil, tahun ajaran, dan kelas."
+---
+
+# Setup Awal Lembaga
+
+Setelah mendaftar di Mazid, ada beberapa pengaturan dasar yang perlu dilakukan agar platform siap digunakan. Halaman ini memandu Anda melalui setiap langkah.
+
+## Apa Itu Setup Awal?
+
+Setup awal mencakup:
+- Konfigurasi profil dan branding lembaga
+- Pembuatan tahun akademik dan kelas
+- Undangan pengguna (operator, pengajar)
+- Konfigurasi email untuk notifikasi
+
+Semua ini harus dilakukan sebelum input data santri/siswa.
+
+## Cara Menggunakan
+
+<Steps>
+  <Step title="Login ke admin panel">
+    Kunjungi `app.mazid.id` dan login dengan email + password yang terdaftar. Anda akan masuk ke dashboard admin.
+  </Step>
+
+  <Step title="Buka Pengaturan → Profil Lembaga">
+    Di sidebar menu, tekan **Pengaturan** → **Profil Lembaga**. Anda akan melihat form dengan field:
+    - Nama lembaga
+    - Deskripsi singkat
+    - Alamat lengkap
+    - Nomor telepon
+    - Email lembaga
+    - Website (opsional)
+
+    Isi semua field yang relevan dan tekan **Simpan**.
+
+    <Tip>
+    Pastikan nama lembaga sama dengan yang digunakan untuk URL portal orang tua (contoh: `pesantrenjaya.mazid.id`).
+    </Tip>
+  </Step>
+
+  <Step title="Setup branding (logo & warna)">
+    Di menu yang sama, cari section **Branding**:
+    - **Logo Lembaga:** Upload logo dalam format PNG atau SVG (rekomendasi: 200x200px atau lebih)
+    - **Warna Tema:** Pilih warna primer untuk portal orang tua (default: hijau Mazid)
+
+    Logo akan tampil di portal orang tua dan dokumen PDF yang dihasilkan sistem.
+
+    <Tip>
+    Gunakan PNG atau SVG untuk kualitas terbaik. Format JPG bisa terlihat kurang bagus saat di-scaling.
+    </Tip>
+  </Step>
+
+  <Step title="Konfigurasi SMTP untuk email">
+    Di **Pengaturan → Email SMTP**, isi:
+    - **SMTP Host:** (contoh: smtp.gmail.com)
+    - **SMTP Port:** (contoh: 587)
+    - **Username:** Email yang akan digunakan untuk mengirim notifikasi
+    - **Password:** Password atau App Password (untuk Gmail: gunakan [App Password](https://myaccount.google.com/apppasswords))
+    - **Dari Nama:** Nama yang akan terlihat di email (contoh: "Pesantren Jaya")
+
+    Tekan **Test Email** untuk memastikan konfigurasi benar.
+
+    <Warning>
+    SMTP harus dikonfigurasi agar notifikasi email (undangan pengguna, reminder tagihan, dll) bisa dikirim.
+    </Warning>
+  </Step>
+
+  <Step title="Buat tahun akademik">
+    Di **Master Data → Tahun Ajaran**, tekan **+ Tahun Ajaran Baru** dan isi:
+    - **Tahun Ajaran:** Format "2024/2025" atau "2024-2025"
+    - **Tanggal Mulai:** Kapan tahun akademik dimulai (contoh: 01 Januari 2024)
+    - **Tanggal Akhir:** Kapan tahun akademik berakhir (contoh: 31 Desember 2024)
+    - **Status:** "Aktif" atau "Draft"
+
+    Pastikan ada **minimal 1 tahun ajaran yang aktif** untuk operasional berjalan.
+
+    <Tip>
+    Buat tahun ajaran untuk dua tahun ke depan agar Anda tidak terburu-buru saat pengalihan tahun.
+    </Tip>
+  </Step>
+
+  <Step title="Buat kelas-kelas">
+    Di **Master Data → Kelas**, tekan **+ Kelas Baru** untuk setiap kelas. Isi:
+    - **Nama Kelas:** "Kelas 1", "Kelas 2", dll atau "Tingkat 1", "Tingkat 2", dll
+    - **Tahun Ajaran:** Pilih tahun akademik yang sesuai
+    - **Kapasitas:** Maksimal santri/siswa di kelas (opsional, untuk tracking)
+    - **Wali Kelas:** Pilih pengguna (bisa diisi belakangan)
+
+    Ulangi untuk semua kelas yang ada di lembaga.
+
+    <Note>
+    Kelas menentukan pengelompokan santri/siswa untuk presensi, hafalan, dan pembuatan tagihan massal.
+    </Note>
+  </Step>
+
+  <Step title="Buat major/jurusan (opsional)">
+    Jika lembaga Anda memiliki jurusan atau program khusus (contoh: "Tahfidz", "Tarbiyah"), buat di **Master Data → Major**.
+
+    <Tip>
+    Field ini opsional—bisa dilewati jika lembaga tidak menggunakan system jurusan.
+    </Tip>
+  </Step>
+
+  <Step title="Undang pengguna (operator, pengajar)">
+    Di **Pengaturan → Pengguna**, tekan **+ Tambah Pengguna** dan isi:
+    - **Email:** Email pengguna (harus unik per lembaga)
+    - **Nama Lengkap:** Nama pengguna
+    - **Peran:** Pilih dari:
+      - **Admin:** Akses penuh semua modul
+      - **Operator:** Fokus pada keuangan dan pembayaran
+      - **Pengajar:** Input presensi, hafalan, nilai
+
+    Tekan **Kirim Undangan**. Pengguna akan menerima email dengan link untuk set password sendiri.
+
+    <Warning>
+    Pastikan email pengguna aktif dan bisa diakses. Link undangan berlaku 48 jam.
+    </Warning>
+  </Step>
+</Steps>
+
+## Hal yang Perlu Diperhatikan
+
+<Warning>
+**Isolasi Data Per Lembaga**
+
+Setiap lembaga di Mazid memiliki data terpisah. Admin dari Lembaga A tidak bisa melihat atau akses data Lembaga B. Begitu juga pengguna yang diundang—mereka hanya bisa akses lembaga tempat mereka diundang.
+
+Jika Anda kelola lebih dari satu lembaga, Anda perlu buat akun terpisah untuk setiap lembaga.
+</Warning>
+
+<Tip>
+**Best Practice Setup**
+
+1. Selesaikan semua pengaturan ini dulu sebelum input santri/siswa
+2. Ajak tim Anda (operator, pengajar) untuk setup akun mereka saat mendapat undangan
+3. Test semua fitur dengan data dummy dulu sebelum input data real
+4. Jangan share admin password—undang pengguna dengan email invitation
+</Tip>
+
+## Pertanyaan Umum
+
+<AccordionGroup>
+  <Accordion title="Bagaimana jika email SMTP sudah dikonfigurasi tapi email tidak terkirim?">
+    1. Cek kembali kredensial SMTP (username, password, host)
+    2. Pastikan app password (jika pakai Gmail) benar
+    3. Cek spam folder di email penerima
+    4. Test dengan "Test Email" di form SMTP
+    5. Jika masih error, hubungi support
+  </Accordion>
+
+  <Accordion title="Bisa mengubah nama tahun ajaran setelah dibuat?">
+    Ya, tekan **Edit** di daftar tahun ajaran. Tapi sebaiknya jangan ubah nama tahun yang sudah ada data santri/siswa untuk menghindari kebingungan.
+  </Accordion>
+
+  <Accordion title="Saya kelola 2 lembaga, bagaimana caranya?">
+    Anda perlu buat 2 akun Mazid terpisah, satu untuk setiap lembaga. Tidak bisa switch lembaga dari 1 akun (setiap lembaga adalah instance terpisah).
+  </Accordion>
+
+  <Accordion title="Apakah saya bisa mengubah URL portal orang tua setelah didaftar?">
+    Tergantung paket subscription. Di paket Pro/Enterprise, Anda bisa gunakan custom domain. Hubungi support untuk bantuan setup domain khusus.
+  </Accordion>
+</AccordionGroup>
+
+## Langkah Berikutnya
+
+Setelah setup dasar selesai, Anda siap untuk:
+- [Input data santri/siswa →](/panduan-admin/manajemen-santri)
+- [Buat tagihan SPP pertama →](/panduan-admin/spp-dan-keuangan)
+- [Setup presensi harian →](/panduan-admin/presensi)

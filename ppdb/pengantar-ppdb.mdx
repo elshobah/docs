@@ -1,0 +1,128 @@
+---
+title: "Pengenalan PPDB Online"
+description: "Sistem penerimaan peserta didik baru online dari awal hingga konversi ke santri/siswa."
+---
+
+# Pengenalan PPDB Online
+
+PPDB (Penerimaan Peserta Didik Baru) adalah modul untuk mengelola pendaftaran calon santri/siswa secara online. Calon santri/siswa bisa daftar via portal publik tanpa perlu ke lembaga.
+
+## Mengapa PPDB Online?
+
+Manfaat PPDB online untuk lembaga:
+- ✅ Calon santri/siswa bisa daftar 24/7 (tidak harus datang)
+- ✅ Data otomatis tersimpan di sistem (tidak perlu reentri)
+- ✅ Orang tua bisa track status pendaftaran (status transparency)
+- ✅ Pembayaran dan dokumen upload bisa online
+- ✅ Workflow approval terstruktur (reviewing, exam, hasil, dll)
+
+Manfaat untuk orang tua:
+- ✅ Daftar dari rumah, tidak perlu antri
+- ✅ Lihat status pendaftaran real-time
+- ✅ Upload dokumen digital (kartu keluarga, ijazah, dll)
+- ✅ Bayar online via berbagai metode
+- ✅ Dapat notifikasi saat ada update
+
+## Alur PPDB di Mazid
+
+```
+┌─────────────────────────────┐
+│ ADMIN BUAT FORMULIR PPDB   │
+│ (periode, kuota, biaya, dll)
+└─────────────────────────────┘
+              ↓
+┌─────────────────────────────┐
+│ CALON SANTRI/SISWA DAFTAR   │
+│ (Tidak perlu login)         │
+│ (Via link publik)           │
+└─────────────────────────────┘
+              ↓
+┌─────────────────────────────┐
+│ SISTEM KIRIM TOKEN          │
+│ (Email/WhatsApp)            │
+│ (Untuk tracking status)     │
+└─────────────────────────────┘
+              ↓
+┌─────────────────────────────┐
+│ ORANG TUA UPLOAD DOKUMEN   │
+│ (KK, Ijazah, dll)          │
+└─────────────────────────────┘
+              ↓
+┌─────────────────────────────┐
+│ ADMIN REVIEW & VERIFIKASI  │
+│ (Cek dokumen, status)      │
+└─────────────────────────────┘
+              ↓
+┌─────────────────────────────┐
+│ CALON BAYAR PENDAFTARAN    │
+│ (Jika required)            │
+└─────────────────────────────┘
+              ↓
+┌─────────────────────────────┐
+│ CALON IKUT UJIAN / TES     │
+│ (Jadwal, soal, hasil)      │
+└─────────────────────────────┘
+              ↓
+┌─────────────────────────────┐
+│ ADMIN INPUT HASIL UJIAN    │
+│ (Lolos/Tidak Lolos)        │
+└─────────────────────────────┘
+              ↓
+┌─────────────────────────────┐
+│ SISTEM KIRIM HASIL KELULUSAN
+│ (Email/WhatsApp)           │
+└─────────────────────────────┘
+              ↓
+┌─────────────────────────────┐
+│ ADMIN KONVERSI KE SANTRI   │
+│ (Jadilah siswa aktif)      │
+└─────────────────────────────┘
+```
+
+## Status Pendaftaran
+
+Setiap pendaftar PPDB punya status:
+
+| Status | Arti |
+|--------|------|
+| 🔄 **Pending** | Baru daftar, menunggu review admin |
+| 👀 **Reviewing** | Admin sedang review dokumen |
+| 💳 **Payment Required** | Harus bayar biaya pendaftaran |
+| ⏳ **Payment Pending** | Pembayaran sudah upload, menunggu verifikasi |
+| ✅ **Payment Confirmed** | Pembayaran terverifikasi |
+| 📋 **Exam Scheduled** | Jadwal ujian sudah dikonfirmasi |
+| ✏️ **Exam Done** | Ujian sudah dilaksanakan |
+| ✔️ **Accepted** | **DITERIMA** - Lolos ujian |
+| ❌ **Rejected** | **TIDAK DITERIMA** - Tidak lolos ujian |
+| 📌 **Waitlist** | Di daftar tunggu (jika ada kuota) |
+| 🚫 **Cancelled** | Pendaftar membatalkan |
+
+## Navigasi PPDB
+
+<CardGroup cols={2}>
+  <Card title="Setup Formulir" icon="gear" href="/ppdb/setup-formulir">
+    Admin: Buat formulir pendaftaran baru
+  </Card>
+  <Card title="Alur Pendaftar" icon="graduation-cap" href="/ppdb/alur-pendaftar">
+    Calon santri/siswa: Cara daftar & track status
+  </Card>
+  <Card title="Konversi ke Santri" icon="check" href="/ppdb/konversi-ke-santri">
+    Admin: Convert pendaftar diterima jadi santri/siswa aktif
+  </Card>
+</CardGroup>
+
+## Fitur PPDB di Mazid
+
+- ✅ Multi-tahap (form → verifikasi → pembayaran → ujian → hasil)
+- ✅ Form dinamis (admin bisa customize pertanyaan)
+- ✅ Upload dokumen (KK, ijazah, akte, dll)
+- ✅ Verifikasi pembayaran online
+- ✅ Ujian online atau offline
+- ✅ Token tracking untuk calon santri/siswa
+- ✅ Notifikasi email/WhatsApp otomatis
+- ✅ Export laporan PPDB
+
+## Langkah Berikutnya
+
+- [Setup Formulir PPDB →](/ppdb/setup-formulir)
+- [Alur Pendaftar →](/ppdb/alur-pendaftar)

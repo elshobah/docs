@@ -1,68 +1,65 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Mazid",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#00E5A0",
+    "light": "#00E5A0",
+    "dark": "#00B87A"
   },
   "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://mazid.id"
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Dokumentasi",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Memulai",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "pengantar",
+              "mulai-cepat"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Panduan Admin",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "panduan-admin/setup-awal",
+              "panduan-admin/manajemen-santri",
+              "panduan-admin/spp-dan-keuangan",
+              "panduan-admin/presensi",
+              "panduan-admin/hafalan",
+              "panduan-admin/perizinan",
+              "panduan-admin/pelanggaran",
+              "panduan-admin/laporan"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "PPDB",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "ppdb/pengantar-ppdb",
+              "ppdb/setup-formulir",
+              "ppdb/alur-pendaftar",
+              "ppdb/konversi-ke-santri"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Portal Orang Tua",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
+              "portal-ortu/cara-akses",
+              "portal-ortu/lihat-tagihan",
+              "portal-ortu/pantau-perkembangan"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Subscription",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "subscription/paket-harga",
+              "subscription/upgrade-downgrade"
             ]
           }
         ]
@@ -71,52 +68,52 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
+          "anchor": "Panduan Admin",
+          "href": "panduan-admin/setup-awal",
           "icon": "book-open-cover"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Portal Orang Tua",
+          "href": "portal-ortu/cara-akses",
+          "icon": "users"
+        },
+        {
+          "anchor": "PPDB",
+          "href": "ppdb/pengantar-ppdb",
+          "icon": "graduation-cap"
         }
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Dashboard",
+        "href": "https://app.mazid.id"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Daftar Gratis",
+      "href": "https://mazid.id/daftar"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "instagram": "https://instagram.com/mazid.id"
     }
+  },
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true
   }
 }

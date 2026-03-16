@@ -1,0 +1,233 @@
+---
+title: "Lihat & Bayar Tagihan di Portal"
+description: "Cara melihat tagihan SPP, metode pembayaran, dan cara membayar dengan kode unik."
+---
+
+# Lihat & Bayar Tagihan di Portal
+
+Panduan ini untuk orang tua yang ingin melihat tagihan dan melakukan pembayaran.
+
+## Membuka Daftar Tagihan
+
+<Steps>
+  <Step title="Login ke portal orang tua">
+    Masukkan email & password, tekan **Login**.
+  </Step>
+
+  <Step title="Buka menu Tagihan">
+    Di sidebar, tekan **Tagihan** atau **SPP & Keuangan**.
+  </Step>
+
+  <Step title="Lihat daftar tagihan">
+    Sistem menampilkan tabel dengan:
+    - **Nama Tagihan:** "SPP Januari", "Biaya Masuk", dll
+    - **Nominal:** Berapa yang harus dibayar
+    - **Deadline:** Kapan harus dibayar
+    - **Status:** Lunas / Belum Lunas
+    - **Kode Unik:** 3 digit untuk transfer (jika belum bayar)
+  </Step>
+</Steps>
+
+## Metode Pembayaran
+
+Sistem Mazid mendukung beberapa metode pembayaran:
+
+<Tabs>
+  <Tab title="Transfer Bank + Kode Unik">
+    **Metode paling populer & otomatis.**
+
+    Cara:
+    1. Lihat **Nominal** + **Kode Unik**
+    2. Contoh: Tagihan Rp 500.000, Kode Unik 123
+    3. Transfer ke rekening lembaga: **Rp 500.123**
+    4. Sistem otomatis verifikasi & bayaran diterima
+    5. Sisa (Rp 123) otomatis masuk tabungan anak
+
+    **Keuntungan:**
+    - ✅ Otomatis terverifikasi (tidak perlu konfirmasi manual)
+    - ✅ Cepat (update real-time)
+    - ✅ Aman (kode unik sebagai verifikasi)
+    - ✅ Kelebihan otomatis ke tabungan
+
+    <Snippet file="tip-kode-unik.mdx" />
+  </Tab>
+
+  <Tab title="QRIS">
+    **Metode scan & bayar dengan e-wallet.**
+
+    Cara:
+    1. Tekan tombol **"Bayar dengan QRIS"**
+    2. Sistem tampilkan QR code
+    3. Scan dengan e-wallet (Gopay, OVO, DANA, LinkAja, dll)
+    4. Ikuti instruksi pembayaran di app e-wallet
+    5. Bayaran masuk otomatis setelah approve
+
+    **Keuntungan:**
+    - ✅ Pembayaran instant
+    - ✅ Bisa pakai berbagai e-wallet
+    - ✅ Receipt otomatis di app e-wallet
+  </Tab>
+
+  <Tab title="E-wallet Direct">
+    **Jika lembaga integrate langsung ke e-wallet.**
+
+    Cara:
+    1. Tekan pilihan e-wallet (Gopay, OVO, DANA, dll)
+    2. Sistem redirect ke app e-wallet
+    3. Confirm pembayaran & input PIN
+    4. Bayaran terverifikasi otomatis
+
+    Ketersediaan tergantung setting lembaga.
+  </Tab>
+
+  <Tab title="Pembayaran Offline">
+    **Jika bayar langsung ke lembaga.**
+
+    Cara:
+    1. Datang ke lembaga dengan membawa uang
+    2. Bilang tagihan apa yang mau dibayar
+    3. Lembaga inputkan pembayaran di sistem
+    4. Data otomatis update di portal (±1-2 jam)
+
+    **Dokumentasi:**
+    - Minta bukti pembayaran dari lembaga
+    - Data akan update di portal setelah admin verifikasi
+  </Tab>
+</Tabs>
+
+## Cara Bayar dengan Kode Unik (Step-by-Step)
+
+Ini metode paling umum dan otomatis:
+
+<Steps>
+  <Step title="Buka tagihan yang belum lunas">
+    Di menu **Tagihan**, lihat baris dengan status **"Belum Lunas"** atau **"Pending"**.
+
+    Catat **Kode Unik** (3 digit angka).
+  </Step>
+
+  <Step title="Hitung nominal transfer">
+    **Formula:** Nominal Tagihan + Kode Unik
+
+    Contoh:
+    - Nominal: Rp 500.000
+    - Kode Unik: 123
+    - **Transfer:** Rp 500.123
+
+    (Bukan Rp 500.000, tapi Rp 500.123 — tambahkan 3 digit kode unik ke akhir nominal)
+  </Step>
+
+  <Step title="Siapkan rekening tujuan">
+    Tekan tombol **"Lihat Rekening Tujuan"** atau **"Detail Transfer"** untuk melihat:
+    - Nomor rekening lembaga
+    - Nama pemilik rekening
+    - Bank (BCA, BRI, Mandiri, dll)
+
+    <Tip>
+    Jika ada instruksi khusus (misal: atas nama siapa), follow instruksi tersebut.
+    </Tip>
+  </Step>
+
+  <Step title="Transfer dari mobile banking / ATM / Internet banking">
+    Buka aplikasi bank Anda (mobile banking, internet banking, atau ke ATM):
+
+    1. Pilih menu **Transfer**
+    2. Pilih nomor rekening tujuan (dari step sebelumnya)
+    3. **Masukkan nominal:** Rp 500.123 (nominal + kode unik)
+    4. Verifikasi data & konfirmasi
+    5. Input PIN / OTP
+    6. Transfer selesai
+
+    Catat **nomor referensi transfer** untuk dokumentasi.
+  </Step>
+
+  <Step title="Tunggu update di portal">
+    Sistem otomatis cek pembayaran setiap beberapa menit.
+
+    Biasanya update dalam **5-15 menit** setelah transfer masuk ke rekening lembaga.
+
+    Status akan berubah dari **"Belum Lunas"** → **"Verifikasi Pending"** → **"Lunas"** ✅
+
+    <Tip>
+    Jika belum terupdate, refresh halaman portal (tekan F5 atau swipe refresh).
+    </Tip>
+  </Step>
+
+  <Step title="Lihat bukti pembayaran">
+    Di daftar tagihan, tekan **"Detail"** atau **"Lihat Bukti"** untuk melihat:
+    - Tanggal pembayaran
+    - Nominal yang dibayar
+    - Status (Lunas)
+    - Kode unik yang digunakan
+    - (Opsional) Receipt dari bank
+
+    Download PDF jika perlu dokumentasi.
+  </Step>
+</Steps>
+
+## Jika Ada Masalah Pembayaran
+
+### Pembayaran Belum Terupdate (Masuk 1+ jam)
+
+Jika sudah transfer tapi status masih "Belum Lunas" setelah 1 jam:
+
+1. **Refresh portal** → tekan F5 atau swipe refresh
+2. **Cek nominal lagi** → pastikan sudah benar (nominal + kode unik)
+3. **Cek di mobile banking** → pastikan transfer benar-benar sukses (lihat history)
+4. Jika masih error, hubungi **admin lembaga** dengan info:
+   - Nominal transfer
+   - Tanggal & waktu transfer
+   - Nomor referensi transfer (dari bank)
+
+### Transfer Nominal Salah (Kurang atau Lebih)
+
+Contoh: Tagihan Rp 500.000 + Kode 123 = harus Rp 500.123, tapi transfer Rp 500.000 (kurang kode unik):
+
+| Kasus | Solusi |
+|-------|--------|
+| **Kurang Rp 123** | Hubungi lembaga, mereka bisa approve manual + selisih masuk tabungan |
+| **Lebih Rp X** | Sistem auto-deteksi, selisih masuk tabungan atau lembaga hubungi untuk klarifikasi |
+| **Beda tagihan** | Hubungi admin untuk cek tagihan mana yang dimaksud |
+
+### QRIS / E-wallet Error
+
+Jika pembayaran QRIS/e-wallet gagal:
+
+1. Cek saldo e-wallet (pastikan cukup)
+2. Coba refresh halaman portal
+3. Coba metode pembayaran lain (transfer, QRIS lain, dll)
+4. Hubungi admin lembaga jika masih gagal
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Apa itu kode unik? Kenapa perlu tambahkan ke nominal?">
+    **Kode unik** adalah 3-digit verifikasi otomatis dari sistem. Dengan tambahkan ke nominal transfer, sistem otomatis tahu:
+    - Siapa yang transfer (dari kode unik)
+    - Tagihan mana yang dibayar (dari nominal + kode)
+    - Admin tidak perlu manual confirm
+
+    Ini adalah fitur unik Mazid untuk make pembayaran lebih mudah & cepat! ✨
+  </Accordion>
+
+  <Accordion title="Bagaimana jika lupa kode unik?">
+    Buka portal, buka daftar tagihan, lihat kolom "Kode Unik" di baris tagihan yang belum lunas. Kode unik tidak pernah berubah (selama tagihan masih aktif).
+  </Accordion>
+
+  <Accordion title="Apakah bisa bayar sebagian (cicilan)?">
+    Tergantung setting lembaga. Biasanya harus lunas satu tagihan sekaligus. Jika ada kesulitan, hubungi lembaga untuk diskusi cicilan.
+  </Accordion>
+
+  <Accordion title="Dapatkah membatalkan pembayaran setelah transfer?">
+    Setelah transfer masuk ke rekening lembaga, pembayaran tidak bisa dibatalkan. Jika ada kesalahan, hubungi admin untuk proses pengembalian dana (bisa memakan waktu).
+  </Accordion>
+
+  <Accordion title="Apakah ada bukti pembayaran digital?">
+    Ya, di portal tekan **"Download Bukti"** atau **"Lihat Detail"** pembayaran untuk download PDF. Bisa digunakan untuk dokumentasi atau keperluan lain.
+  </Accordion>
+</AccordionGroup>
+
+## Langkah Berikutnya
+
+- [Pantau Perkembangan Anak →](/portal-ortu/pantau-perkembangan)
+- [Cara Akses Portal →](/portal-ortu/cara-akses)

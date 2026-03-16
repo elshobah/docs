@@ -1,0 +1,189 @@
+---
+title: "Laporan & Analytics"
+description: "Generate laporan keuangan, akademik, dan operational untuk keperluan manajemen lembaga."
+---
+
+# Laporan & Analytics
+
+Modul laporan memberikan visibility ke dalam semua data operasional lembaga. Admin bisa generate laporan keuangan, akademik, dan disiplin untuk analisis dan decision making.
+
+## Jenis-Jenis Laporan
+
+<Tabs>
+  <Tab title="Keuangan">
+    **Laporan Keuangan** mencakup:
+    - Total tagihan (SPP, biaya masuk, dll)
+    - Total pembayaran masuk (per bulan, per santri/siswa)
+    - Tunggakan (belum lunas)
+    - Pengeluaran lembaga
+    - Saldo per santri/siswa
+
+    Gunakan untuk planning budget dan audit internal.
+  </Tab>
+
+  <Tab title="Akademik">
+    **Laporan Akademik** mencakup:
+    - Presensi per santri/siswa atau per kelas
+    - Progress hafalan
+    - Nilai atau ranking (jika ada sistem penilaian)
+    - Kelulusan/keluar
+
+    Gunakan untuk analisis academic performance.
+  </Tab>
+
+  <Tab title="Disiplin">
+    **Laporan Disiplin** mencakup:
+    - Poin pelanggaran per santri/siswa
+    - Jenis pelanggaran paling sering
+    - Prestasi santri/siswa
+    - Sanksi yang diterapkan
+
+    Gunakan untuk monitoring disiplin lembaga.
+  </Tab>
+
+  <Tab title="Operational">
+    **Laporan Operational** mencakup:
+    - Jumlah santri/siswa aktif
+    - Distribusi per kelas
+    - Data pengguna (admin, pengajar, operator)
+    - Aktivitas sistem (siapa login kapan, apa diubah)
+
+    Gunakan untuk monitoring health sistem dan aktivitas.
+  </Tab>
+</Tabs>
+
+## Cara Menggunakan
+
+### Generate Laporan Keuangan
+
+<Steps>
+  <Step title="Buka Laporan → Keuangan">
+    Tekan **Generate Laporan Baru** atau pilih laporan yang sudah ada.
+  </Step>
+
+  <Step title="Atur filter">
+    - **Periode:** Bulan/tahun tertentu atau range tanggal
+    - **Kategori:** SPP, Biaya Masuk, Tabungan, Pengeluaran, dll
+    - **Santri/Siswa:** Semua atau santri/siswa tertentu
+  </Step>
+
+  <Step title="Generate">
+    Tekan **Generate**. Sistem akan kalkulasi dan tampilkan ringkasan:
+    - Total tagihan
+    - Total dibayar
+    - Sisa tunggakan
+    - Persentase pembayaran
+
+    Bisa lihat detail transaksi jika di-expand.
+  </Step>
+
+  <Step title="Export">
+    Tekan **Export** untuk download PDF atau Excel. File siap untuk keperluan laporan resmi atau audit.
+  </Step>
+</Steps>
+
+### Generate Laporan Presensi
+
+<Steps>
+  <Step title="Buka Laporan → Presensi">
+    Tekan **Generate Laporan**.
+  </Step>
+
+  <Step title="Atur filter">
+    - **Periode:** Bulan/tahun
+    - **Kelas:** Kelas mana
+    - **Metrik:** Total hadir, persen kehadiran, dll
+  </Step>
+
+  <Step title="Generate">
+    Lihat tabel dengan ranking presensi santri/siswa.
+  </Step>
+
+  <Step title="Export">
+    Export untuk laporan ke orang tua atau untuk data rapor.
+  </Step>
+</Steps>
+
+### Generate Laporan Hafalan
+
+<Steps>
+  <Step title="Buka Laporan → Hafalan">
+    Tekan **Generate Laporan**.
+  </Step>
+
+  <Step title="Atur filter">
+    - **Periode:** Tahun ajaran atau range tertentu
+    - **Target:** Santri/siswa dengan target hafalan tertentu
+  </Step>
+
+  <Step title="Generate">
+    Lihat progress semua santri/siswa dengan target hafalan:
+    - Juz yang sudah dihafalkan
+    - Progress bar
+    - Status (on track, behind, completed)
+  </Step>
+
+  <Step title="Export">
+    Export untuk monitoring atau sharing ke stakeholder.
+  </Step>
+</Steps>
+
+### View Analytics Dashboard
+
+<Steps>
+  <Step title="Buka Dashboard Analytics">
+    Di home admin panel, lihat section **Analytics** untuk overview cepat.
+  </Step>
+
+  <Step title="Lihat metrik utama">
+    - **Santri/Siswa Aktif:** Total santri/siswa
+    - **Pembayaran Bulan Ini:** Persentase pembayaran
+    - **Presensi Hari Ini:** Jumlah hadir/alpa
+    - **Pelanggaran Baru:** Jumlah pelanggaran bulan ini
+  </Step>
+
+  <Step title="Klik untuk detail">
+    Klik pada setiap card untuk drill-down ke laporan detail.
+  </Step>
+</Steps>
+
+## Hal yang Perlu Diperhatikan
+
+<Tip>
+**Best Practice:**
+1. Generate laporan keuangan setiap bulan untuk monitoring cashflow
+2. Share laporan keuangan dengan board/pengurus lembaga setiap kuartal
+3. Monitor laporan presensi untuk deteksi santri/siswa dengan absensi tinggi
+4. Gunakan laporan disiplin untuk coaching santri/siswa yang bermasalah
+5. Archive laporan untuk audit trail & compliance
+</Tip>
+
+<Warning>
+**Data di laporan adalah data sensitif.** Jangan share laporan detail dengan sembarangan—hanya ke stakeholder yang authorized (pengurus, kepala lembaga, dll).
+</Warning>
+
+## Pertanyaan Umum
+
+<AccordionGroup>
+  <Accordion title="Bisa schedule laporan otomatis dikirim ke email?">
+    Belum ada fitur auto-schedule di v1. Untuk saat ini, generate & export manual, lalu email ke stakeholder. Fitur auto-schedule sedang direncanakan untuk update berikutnya.
+  </Accordion>
+
+  <Accordion title="Berapa lama data laporan disimpan?">
+    Semua laporan disimpan selamanya di sistem. Laporan yang sudah di-export juga bisa di-archive di sistem untuk referensi belakangan.
+  </Accordion>
+
+  <Accordion title="Apakah ada laporan untuk keperluan pajak/audit?">
+    Ya, **laporan keuangan lengkap** bisa di-export dalam format yang sesuai untuk keperluan pajak atau audit. Konsultasi dengan akuntan lembaga untuk format yang diperlukan.
+  </Accordion>
+
+  <Accordion title="Bisa buat laporan custom sesuai kebutuhan lembaga?">
+    Fitur custom report belum ada di v1. Hubungi support untuk diskusi kebutuhan custom—mungkin bisa di-develop untuk paket Enterprise.
+  </Accordion>
+</AccordionGroup>
+
+## Langkah Berikutnya
+
+- [Manajemen Santri/Siswa →](/panduan-admin/manajemen-santri)
+- [Manajemen Keuangan →](/panduan-admin/spp-dan-keuangan)
+- [Setup Awal Lembaga →](/panduan-admin/setup-awal)

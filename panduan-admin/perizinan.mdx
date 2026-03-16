@@ -1,0 +1,110 @@
+---
+title: "Perizinan & Izin Keluar"
+description: "Kelola pengajuan izin keluar/pulang santri/siswa dari lembaga."
+---
+
+# Perizinan & Izin Keluar
+
+Modul perizinan memungkinkan santri/siswa atau orang tua untuk mengajukan izin keluar/pulang dari lembaga. Admin bisa review dan menyetujui atau menolak pengajuan.
+
+## Apa Itu Perizinan?
+
+Perizinan adalah sistem formal untuk santri/siswa yang ingin keluar dari lembaga (ke rumah, ke rumah sakit, dll). Sistem mencakup:
+- **Ajukan Izin:** Santri/siswa atau orang tua ajukan via portal
+- **Review:** Admin review pengajuan
+- **Approval:** Admin setujui atau tolak
+- **Tracking:** Catat waktu keluar-masuk santri/siswa
+
+## Cara Menggunakan
+
+### Santri/Siswa atau Orang Tua Ajukan Izin
+
+Di portal, orang tua bisa tekan **Perizinan → Ajukan Izin Keluar**:
+- Pilih santri/siswa
+- Pilih alasan (sakit, keluarga, dll)
+- Pilih tanggal & jam keluar-masuk
+- Upload file pendukung (surat orang tua, dokter, dll)
+- Submit
+
+### Admin Review & Setujui Pengajuan
+
+<Steps>
+  <Step title="Buka Perizinan → Pengajuan Izin">
+    Admin akan melihat daftar semua pengajuan izin yang masuk.
+  </Step>
+
+  <Step title="Review detail pengajuan">
+    - Santri/siswa yang ajukan
+    - Alasan izin
+    - Tanggal & jam keluar-masuk
+    - File pendukung
+    - Status saat ini (Pending / Approved / Rejected)
+  </Step>
+
+  <Step title="Setujui atau tolak">
+    Tekan **Setujui** untuk approve atau **Tolak** untuk reject.
+
+    <Tip>
+    Jika ada pertanyaan, bisa reply/komentar sebelum approve/reject.
+    </Tip>
+  </Step>
+
+  <Step title="Otomatis update presensi">
+    Jika disetujui, status presensi santri/siswa hari itu otomatis berubah menjadi "Izin".
+  </Step>
+</Steps>
+
+### Lihat Riwayat Izin
+
+<Steps>
+  <Step title="Buka Perizinan → Riwayat Izin">
+    Filter berdasarkan:
+    - Periode
+    - Santri/siswa
+    - Status (disetujui/ditolak)
+  </Step>
+
+  <Step title="Lihat detail">
+    - Berapa lama izin
+    - Berapa kali ajukan izin (indicator masalah?)
+  </Step>
+
+  <Step title="Export laporan">
+    Tekan **Export** untuk laporan PDF/Excel perizinan santri/siswa.
+  </Step>
+</Steps>
+
+## Hal yang Perlu Diperhatikan
+
+<Warning>
+**Perizinan yang sering bisa jadi indicator masalah.** Jika ada santri/siswa yang sering izin, investigate lebih lanjut—bisa ada masalah akademik atau pribadi yang perlu dibantu.
+</Warning>
+
+<Tip>
+**Best Practice:**
+1. Set SOP izin yang jelas (harus surat orang tua, dokter, dll)
+2. Approve izin secepat mungkin agar tidak ganggu planning santri/siswa
+3. Monitor santri/siswa dengan izin sering
+4. Gunakan data perizinan untuk analisis pola (contoh: banyak izin di hari tertentu?)
+</Tip>
+
+## Pertanyaan Umum
+
+<AccordionGroup>
+  <Accordion title="Bagaimana jika santri/siswa keluar tanpa izin (bolos)?">
+    Input manually di **Presensi** sebagai "Alpa". Kemudian hubungi orang tua untuk tanya ada masalah apa.
+  </Accordion>
+
+  <Accordion title="Bisa set batas berapa kali boleh izin?">
+    Belum ada fitur otomatis batas izin. Admin perlu monitor manual dan komunikasi dengan orang tua jika terlihat sering.
+  </Accordion>
+
+  <Accordion title="Apakah santri/siswa bisa batalkan izin yang sudah diajukan?">
+    Tergantung setting lembaga. Biasanya bisa batalkan selama belum diapprove, tapi setelah approved admin yang perlu ubah.
+  </Accordion>
+</AccordionGroup>
+
+## Langkah Berikutnya
+
+- [Pelanggaran & Prestasi →](/panduan-admin/pelanggaran)
+- [Laporan & Analytics →](/panduan-admin/laporan)
