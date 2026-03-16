@@ -5,7 +5,8 @@
       "Bash(npm install:*)",
       "Bash(npx mintlify@latest validate)",
       "Bash(rm -rf ai-tools essentials api-reference/endpoint development.mdx index.mdx quickstart.mdx snippets/snippet-intro.mdx)",
-      "Bash(ls -la *.mdx)"
+      "Bash(ls -la *.mdx)",
+      "Bash(node -e \":*)"
     ]
   }
 }

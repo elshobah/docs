@@ -69,17 +69,17 @@
       "anchors": [
         {
           "anchor": "Panduan Admin",
-          "href": "panduan-admin/setup-awal",
+          "href": "/panduan-admin/setup-awal",
           "icon": "book-open-cover"
         },
         {
           "anchor": "Portal Orang Tua",
-          "href": "portal-ortu/cara-akses",
+          "href": "/portal-ortu/cara-akses",
           "icon": "users"
         },
         {
           "anchor": "PPDB",
-          "href": "ppdb/pengantar-ppdb",
+          "href": "/ppdb/pengantar-ppdb",
           "icon": "graduation-cap"
         }
       ]
