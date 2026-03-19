@@ -3,14 +3,14 @@
   "theme": "mint",
   "name": "Mazid",
   "colors": {
-    "primary": "#00E5A0",
-    "light": "#00E5A0",
-    "dark": "#00B87A"
+    "primary": "#006239",
+    "light": "#00a84f",
+    "dark": "#004d2a"
   },
   "favicon": "/favicon.svg",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg",
+    "light": "https://upload.mazid.id/mazid-logo.png",
+    "dark": "https://upload.mazid.id/mazid-logo.png",
     "href": "https://mazid.id"
   },
   "navigation": {
