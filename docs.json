@@ -89,13 +89,13 @@
     "links": [
       {
         "label": "Dashboard",
-        "href": "https://app.mazid.id"
+        "href": "https://mazid.id/pre-login"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Daftar Gratis",
-      "href": "https://mazid.id/daftar"
+      "href": "https://mazid.id/pre-register"
     }
   },
   "contextual": {
