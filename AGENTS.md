@@ -413,5 +413,5 @@ Live di docs.mazid.id
 - **Repo utama Mazid (Laravel/Next.js):** referensi untuk fitur yang sedang dikembangkan
 - **PPDB.md** di repo utama: spesifikasi lengkap modul PPDB
 - **mazid-ai-implementation.html** di repo utama: roadmap fitur AI
-- **Domain:** `mazid.id`, email `shobah@inbox.mazid.id`
+- **Domain:** `mazid.id`, email `hello@mazid.id`
 - **Mintlify Docs:** https://mintlify.com/docs
